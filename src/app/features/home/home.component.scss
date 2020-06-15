@@ -1,0 +1,28 @@
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+mat-card + mat-card {
+    margin-top: 24px;
+}
+
+mat-selection-list {
+    width: 100%;
+}
+
+
+.mat-list-base {
+    padding-top: 0;
+}
+
+
+.btn-parameters, .select-parameters {
+    width: 80%;
+}
+
+.item-full {
+    width: 90%;
+}
+
+

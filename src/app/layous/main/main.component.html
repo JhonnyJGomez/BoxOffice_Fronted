@@ -1,0 +1,28 @@
+<mat-toolbar color="" fixed>
+  <span>CFPS - Cinema Forescasting and Programming Solution</span>
+  <span class="fill-remaining-space"></span>
+</mat-toolbar>
+<mat-drawer-container>
+  <mat-drawer mode="side" opened>
+    <mat-accordion>
+      <mat-expansion-panel [disabled]="menuItem.disabled" [expanded]="menuItem.expanded" *ngFor="let menuItem of menuItems">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ menuItem.label }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <mat-list-item
+            *ngFor="let link of menuItem.items"
+            [routerLink]="[link.route]"
+            routerLinkActive="list-item-active">
+            <a matLine href="#{{ link.route }}">{{ link.label }}</a>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

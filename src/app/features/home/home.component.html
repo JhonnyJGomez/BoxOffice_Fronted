@@ -1,0 +1,81 @@
+<mat-card>
+    <mat-card-title>Estrenos Forecast</mat-card-title>
+    <mat-card-content class="wrapper">
+        <mat-card>
+            <mat-grid-list cols="3" rowHeight="100">
+                <mat-grid-tile>
+                    <mat-form-field>
+                        <input matInput placeholder="Semana de estreno" type="date" [(ngModel)]="date" (ngModelChange)="getWeeks()">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field>
+                        <input matInput placeholder="Nº semana" type="number" [(ngModel)]="week">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <button mat-raised-button color="warn" (click)="loadData()">
+                        Aplicar
+                    </button>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-card>
+        <mat-card *ngIf="premieres.length > 0">
+            <mat-grid-list cols="2" [rowHeight]="(premieres.length * 56) + 48">
+                <mat-grid-tile>
+                    <mat-list>
+                        <h3 matSubheader>Estrenos definidos</h3>
+                        <mat-selection-list *ngFor="let premiere of premieres" [(ngModel)]="premieresListSelected">
+                            <mat-list-option class = "checked2" [selected]="premiere.checked" [value]="premiere.Cod_pelicula">
+                                {{ premiere.Cod_pelicula }} {{ premiere.title }}
+                            </mat-list-option>
+                        </mat-selection-list>
+                    </mat-list>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <button mat-raised-button color="warn" (click)="savePremiereForecast()">
+                        Aplicar
+                    </button>
+                </mat-grid-tile>
+            </mat-grid-list>
+            <mat-grid-list cols="2" [rowHeight]="100">
+                <mat-grid-tile>
+                    <mat-form-field>
+                        <mat-label>Ciudad</mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let city of cities; index as i" [value]="i">
+                                {{ city.ciudad }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-card>
+        <mat-card *ngIf="showParamsSection">
+            <mat-grid-list cols="2" rowHeight="100">
+                <mat-grid-tile>
+                    <mat-form-field class="select-parameters">
+                        <mat-label>Seleccione estreno a parametrizar</mat-label>
+                        <mat-select [(ngModel)]="premiereToAddParams">
+                            <mat-option name="premiereToAddParams" ngDefaultControl *ngFor="let premier of premieresForecast" [value]="premier">
+                                {{ premier.Titulo }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <button mat-raised-button color="warn" class="btn-parameters" (click)="openModal()">
+                        Ir parámetros
+                    </button>
+                </mat-grid-tile>
+            </mat-grid-list>
+            <mat-grid-list cols="1" rowHeight="100">
+                <mat-grid-tile>
+                    <button mat-raised-button color="warn" class="item-full" (click)="generateForecast()">
+                        Generar forecast
+                    </button>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-card>
+    </mat-card-content>
+</mat-card>

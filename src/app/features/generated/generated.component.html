@@ -1,0 +1,46 @@
+<mat-card>
+    <mat-card-title>Estrenos definidos</mat-card-title>
+    <mat-card-content class="wrapper">
+        <table mat-table [dataSource]="dataSource" class="score-table">
+            <ng-container matColumnDef="Rank">
+                <th mat-header-cell *matHeaderCellDef>Rank</th>
+                <td mat-cell *matCellDef="let element"> {{element.Rank}} </td>
+                <td mat-footer-cell *matFooterCellDef>Total</td>
+            </ng-container>
+            <ng-container matColumnDef="Title">
+                <th mat-header-cell *matHeaderCellDef>Title</th>
+                <td mat-cell *matCellDef="let element"> {{element.Title}} </td>
+                <td mat-footer-cell *matFooterCellDef></td>
+            </ng-container>
+            <ng-container matColumnDef="Rating">
+                <th mat-header-cell *matHeaderCellDef>Rating</th>
+                <td mat-cell *matCellDef="let element"> {{element.Rating}} </td>
+                <td mat-footer-cell *matFooterCellDef></td>
+            </ng-container>
+            <ng-container matColumnDef="Dist">
+                <th mat-header-cell *matHeaderCellDef>Dist</th>
+                <td mat-cell *matCellDef="let element"> {{element.Dist}} </td>
+                <td mat-footer-cell *matFooterCellDef></td>
+            </ng-container>
+            <ng-container matColumnDef="Genre">
+                <th mat-header-cell *matHeaderCellDef>Genre</th>
+                <td mat-cell *matCellDef="let element"> {{element.Genre}} </td>
+                <td mat-footer-cell *matFooterCellDef></td>
+            </ng-container>
+            <ng-container matColumnDef="ReleaseDate">
+                <th mat-header-cell *matHeaderCellDef>ReleaseDate</th>
+                <td mat-cell *matCellDef="let element"> {{element.ReleaseDate}} </td>
+                <td mat-footer-cell *matFooterCellDef></td>
+            </ng-container>
+            <ng-container matColumnDef="Scored Labels">
+                <th mat-header-cell *matHeaderCellDef>Scored Labels</th>
+                <td mat-cell *matCellDef="let element"> {{element['Scored Labels']}} </td>
+                <td mat-footer-cell *matFooterCellDef>{{ getTotal() }}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
+        </table>
+    </mat-card-content>
+</mat-card>

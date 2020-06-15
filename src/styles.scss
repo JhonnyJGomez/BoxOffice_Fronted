@@ -1,0 +1,36 @@
+body {
+    margin: 64px 0 0 0;
+    min-height: calc(100vh - 64px);
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-expansion-panel-content {
+    .mat-expansion-panel-body {
+        padding: 12px 24px;
+
+        .mat-list {
+            padding-top: 0;
+        }
+    }
+}
+
+.checkbox-custom {
+    .mat-checkbox-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .mat-checkbox-inner-container {
+            margin-left: 0;
+        }
+    }
+}
+
+.mat-dialog-container {
+    position: relative;
+}
+
+mat-dialog-content.mat-dialog-content {
+    max-height: none;
+}
+

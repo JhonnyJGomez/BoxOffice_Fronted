@@ -1,0 +1,25 @@
+.generated-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.mat-list-base {
+    width: 100%;
+    padding-top: 0;
+}
+
+.generated-item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.score-table {
+    width: 100%;
+}
