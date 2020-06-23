@@ -17,7 +17,8 @@ export class ModalComponent implements OnInit {
       id: 0,
       name: 'Temporada de vacaciones',
       checked: false
-    },
+    }
+   /*  ,
     {
       id: 1,
       name: 'Inicia sábado después de las 10:00 pm?',
@@ -27,7 +28,7 @@ export class ModalComponent implements OnInit {
       id: 2,
       name: 'Inicia domingo antes de las 6:00 pm?',
       checked: true
-    }
+    } */
   ];
   days: Day[] = [
     {
@@ -79,7 +80,9 @@ export class ModalComponent implements OnInit {
     private paramsService: ParamsService
   ) {
     this.premiere = data;
+    console.log(this.premiere)
     this.paramsService.getParams().subscribe((response: ParamsResponse) => {
+      console.log("response " , response)
       this.params = response.Value;
       this.params.map((param) => {
         param.value = param.Type === 'text' ? '' : [];

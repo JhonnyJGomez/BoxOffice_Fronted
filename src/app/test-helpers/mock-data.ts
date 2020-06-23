@@ -6,73 +6,44 @@ export class MockData {
         Results: {
             output1: [
                 {
-                    Rank: '1',
+                    Rank: '908',
                     Title: 'Maleficent: Mistress Of Evil',
                     Rating: 'A',
                     Dist: 'DISNEY',
                     Genre: 'Adventure',
-                    ReleaseDate: '10/17/2019 12:00:00 AM',
-                    'Scored Labels': '2793020.5'
+                    ReleaseDate: '06/18/2020 12:00:00 AM',
+                    'Scored Labels': '69547'
                 },
                 {
-                    Rank: '1796',
-                    Title: '0334 TERREMOTO EN CHILE',
+                    Rank: '1296',
+                    Title: 'TERREMOTO EN CHILE',
                     Rating: 'M 14',
                     Dist: 'DELT',
                     Genre: 'Drama',
-                    ReleaseDate: '3/21/2013 12:00:00 AM',
-                    'Scored Labels': '2038.8525390625'
-                },
-                {
-                    Rank: '801',
-                    Title: '10 CLOVERFIELD LANE',
-                    Rating: 'M 14',
-                    Dist: 'PPI',
-                    Genre: 'Suspense',
-                    ReleaseDate: '4/14/2016 12:00:00 AM',
-                    'Scored Labels': '65834.6796875'
-                },
-                {
-                    Rank: '1198',
-                    Title: '12 STRONG',
-                    Rating: 'M 14',
-                    Dist: 'DIAMOND',
-                    Genre: 'Drama',
-                    ReleaseDate: '5/10/2018 12:00:00 AM',
-                    'Scored Labels': '22339.140625'
-                },
-                {
-                    Rank: '674',
-                    Title: '12 YEARS A SLAVE',
-                    Rating: 'M 14',
-                    Dist: 'DISNEY',
-                    Genre: 'Drama',
-                    ReleaseDate: '2/13/2014 12:00:00 AM',
-                    'Scored Labels': '93814.796875'
-                },
-                {
-                    Rank: '1498',
-                    Title: '13 HOURSTHE SECRET SOLDIERS OF BENGHAZI',
-                    Rating: 'M 14',
-                    Dist: 'PPI',
-                    Genre: 'Action',
-                    ReleaseDate: '2/25/2016 12:00:00 AM',
-                    'Scored Labels': '8545.4541015625'
+                    ReleaseDate: '06/18/2020 12:00:00 AM',
+                    'Scored Labels': '16920'
                 }
             ]
         }
     };
     GET_WEEKS = {
-        num_semana: '49'
+        num_semana: '25'
     };
     GET_PREMIERS = {
         value: [
             {
                 Cod_pelicula: 'HO00001',
-                title: 'AVENGER END GAME',
+                title: 'MALEFICENT: MISTRESS OF EVIL',
                 Rating: 'A',
                 Dist: 'DISNEY',
                 Genre: 'Adventure'
+            },
+            {
+                Cod_pelicula: 'HO00002',
+                title: 'TERREMOTO EN CHILE',
+                Rating: 'M14',
+                Dist: 'DELT',
+                Genre: 'Drama'
             }
         ]
     };
@@ -92,6 +63,9 @@ export class MockData {
             },
             {
                 ciudad: 'Cajarmarca'
+            },
+            {
+                ciudad: 'Huancayo'
             }
         ]
     };
@@ -101,12 +75,12 @@ export class MockData {
     GET_PREMIERE_FORECAST = {
         Value: [
             {
-                Cod_pelicula: 'HO00001',
-                Titulo: 'AVENGER END GAME'
+                Cod_pelicula: 'HO00908',
+                Titulo: 'MALEFICENT: MISTRESS OF EVIL'
             },
             {
-                Cod_pelicula: 'HO00002',
-                Titulo: 'STARWARS'
+                Cod_pelicula: 'HO01296',
+                Titulo: 'TERREMOTO EN CHILE'
             }
         ]
     };
@@ -117,7 +91,7 @@ export class MockData {
                 Atributo: 'Temporada_Vacaciones',
                 Type: 'check'
             },
-            {
+           /* {
                 Id: '2',
                 Atributo: 'Inicio_sabado_d10',
                 Type: 'check'
@@ -136,7 +110,7 @@ export class MockData {
                 Id: '5',
                 Atributo: 'Precipitacion',
                 Type: 'text'
-            },
+            },*/
             {
                 Id: '6',
                 Atributo: 'evento_tv',
@@ -161,13 +135,22 @@ export class MockData {
         Results: {
             output1: [
                 {
-                    Rank: '1',
-                    Title: 'Maleficent: Mistress Of Evil',
+                    Rank: '908',
+                    Title: 'MALEFICENT: MISTRESS OF EVIL',
                     Rating: 'A',
                     Dist: 'DISNEY',
                     Genre: 'Adventure',
-                    ReleaseDate: '10/17/2019 12:00:00 AM',
-                    'Scored Labels': 2793020.5
+                    ReleaseDate: '06/18/2020 12:00:00 AM',
+                    'Scored Labels': 69547
+                },
+                {
+                    Rank: '1296',
+                    Title: 'TERREMOTO EN CHILE',
+                    Rating: 'A',
+                    Dist: 'DELT',
+                    Genre: 'Drama',
+                    ReleaseDate: '06/18/2020 12:00:00 AM',
+                    'Scored Labels': 16920
                 }
             ]
         }

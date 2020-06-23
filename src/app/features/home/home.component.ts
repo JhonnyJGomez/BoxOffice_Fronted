@@ -6,6 +6,7 @@ import { ModalComponent } from '@components/modal/modal.component';
 import { WeeksService } from '@services/weeks/weeks.service';
 import { PremiersService } from '@services/premiers/premiers.service';
 import { CitiesService } from '@services/cities/cities.service';
+
 import {
   WeeksResponse,
   PremiersResponse,
@@ -44,7 +45,7 @@ export class HomeComponent implements OnInit {
     private router: Router,
     public dialog: MatDialog
   ) { }
-
+  
   ngOnInit() { }
 
   getItems() {
@@ -66,6 +67,7 @@ export class HomeComponent implements OnInit {
       const premiereToSave = {};
       const paramsFromModal = [...params];
       paramsFromModal.map(item => premiereToSave[item.Id] = item.value);
+
       // tslint:disable-next-line: no-string-literal
       premiereToSave['Cod_pelicula'] = this.premiereToAddParams.Cod_pelicula;
       const premiereFound = { ...this.premieres.find(premire => premire.Cod_pelicula === this.premiereToAddParams.Cod_pelicula) }
@@ -84,7 +86,8 @@ export class HomeComponent implements OnInit {
    */
   getWeeks() {
     this.weeksService.getWeeks(this.date).subscribe((response: WeeksResponse) => {
-      this.week = Number(response.num_semana);
+      setTimeout(()=>{ this.week = Number(response.num_semana) }, 1000)
+      //this.week = Number(response.num_semana);
     }, error => { });
   }
 
@@ -120,9 +123,9 @@ export class HomeComponent implements OnInit {
    */
   savePremiereForecast() {
     const premiereSelected: PremiereSelected[] = [];
-    this.premieresListSelected.map(
+/*     this.premieresListSelected.map(
       premiere => premiereSelected.push({ num_semana: String(this.week), id_pelicula: premiere })
-    );
+    ); */
     this.premiersService.postAddForecastPremier(premiereSelected).subscribe((response: SuccessReponse) => {
       this.showParamsSection = response.Result === 200;
       if (this.showParamsSection) {
@@ -136,7 +139,8 @@ export class HomeComponent implements OnInit {
    */
   getPremiereForecast() {
     this.premiersService.getForecastPremiers().subscribe((response: GetPremieresForecast) => {
-      this.premieresForecast = response.Value;
+      setTimeout(()=>{ this.premieresForecast = response.Value }, 2000)
+      //this.premieresForecast = response.Value;
     });
   }
 

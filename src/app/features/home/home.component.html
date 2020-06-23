@@ -25,11 +25,13 @@
                 <mat-grid-tile>
                     <mat-list>
                         <h3 matSubheader>Estrenos definidos</h3>
-                        <mat-selection-list *ngFor="let premiere of premieres" [(ngModel)]="premieresListSelected">
-                            <mat-list-option class = "checked2" [selected]="premiere.checked" [value]="premiere.Cod_pelicula">
-                                {{ premiere.Cod_pelicula }} {{ premiere.title }}
-                            </mat-list-option>
-                        </mat-selection-list>
+                        <section *ngFor="let premiere of premieres"  [(ngModel)]="premieresListSelected"> 
+                            <mat-selection-list [(ngModel)]="premieresListSelected">
+                                <mat-list-option [selected]="premiere.checked" [value]="premiere.Cod_pelicula">
+                                    {{ premiere.Cod_pelicula }} {{ premiere.title }}
+                                </mat-list-option>
+                            </mat-selection-list>
+                        </section>
                     </mat-list>
                 </mat-grid-tile>
                 <mat-grid-tile>
