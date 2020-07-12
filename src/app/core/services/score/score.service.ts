@@ -29,7 +29,7 @@ export class ScoreService implements OnInit {
   constructor(
     private http: HttpClient
   ) {
-    this.generateURL = APP_CONSTANTS.API.GET_DATA;
+    this.generateURL = APP_CONSTANTS.API.BASE;
     this.httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',

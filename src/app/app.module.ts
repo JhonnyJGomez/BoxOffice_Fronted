@@ -48,6 +48,7 @@ import { ModalComponent } from '@components/modal/modal.component';
 import { GeneratedComponent } from './features/generated/generated.component';
 import { EnvironmentInterceptor } from './core/interceptors/environment-interceptor';
 import { MockData } from './test-helpers/mock-data';
+import { ScheduleComponent } from './features/schedule/schedule.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { MockData } from './test-helpers/mock-data';
     HomeComponent,
     GeneratedComponent,
     MainComponent,
-    ModalComponent
+    ModalComponent,
+    ScheduleComponent
   ],
   imports: [
     BrowserModule,

@@ -22,15 +22,15 @@ export class EnvironmentInterceptor implements HttpInterceptor {
 
             if (req.url.match('swagger')) {
                 mockResponse.body = this.mockData.getScore();
-            } else if (req.url.match('semanas/fecha_inicial')) {
+            } else if (req.url.match('semanas?fecha_inicial')) {
                 mockResponse.body = this.mockData.getWeek();
             } else if (req.url.match('peliculas_semanas')) {
                 mockResponse.body = this.mockData.getPremiers();
             } else if (req.url.match('ciudades')) {
                 mockResponse.body = this.mockData.getCities();
-            } else if (req.url.match('peliculas_forecast/create')) {
+            } else if (req.url.match('peliculas_forecast?create')) {
                 mockResponse.body = this.mockData.postPremiereForecast();
-            } else if (req.url.match('peliculas_forecast/num_semana')) {
+            } else if (req.url.match('peliculas_forecast?num_semana')) {
                 mockResponse.body = this.mockData.getPremiereForecast();
             } else if (req.url.match('parametros')) {
                 mockResponse.body = this.mockData.getParams();

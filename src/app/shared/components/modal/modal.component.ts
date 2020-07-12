@@ -80,9 +80,7 @@ export class ModalComponent implements OnInit {
     private paramsService: ParamsService
   ) {
     this.premiere = data;
-    console.log(this.premiere)
     this.paramsService.getParams().subscribe((response: ParamsResponse) => {
-      console.log("response " , response)
       this.params = response.Value;
       this.params.map((param) => {
         param.value = param.Type === 'text' ? '' : [];

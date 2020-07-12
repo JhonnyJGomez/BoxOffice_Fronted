@@ -32,18 +32,24 @@ export interface Premiere {
     Genre: string;
     checked: boolean;
     ReleaseDate?: string;
+    params?: any;
 }
 
 export interface CitiesResponse {
-    value: Citiy[];
+    value: City[];
 }
 
-export interface Citiy {
+export interface City {
     ciudad: string;
+    id: number;
+}
+
+export interface Cinema {
+    name: string;
 }
 
 export interface SuccessReponse {
-    Result: number;
+    Result: string;
 }
 
 export interface PremiereSelected {
@@ -52,12 +58,13 @@ export interface PremiereSelected {
 }
 
 export interface GetPremieresForecast {
-    Value: PremiereForecast[];
+    value: PremiereForecast[];
 }
 
 export interface PremiereForecast {
-    Cod_pelicula: string;
-    Titulo: string;
+    cod_forecast: number;
+    id_movie: number;
+    nom_pelicula: string;
 }
 
 export interface ParamsResponse {
@@ -78,3 +85,10 @@ export interface Day {
     name: string;
     checked: boolean;
 }
+
+export interface PremiereToGenerateForecast  {
+    Inputs: Premiere[];
+    GlobalParameters: {};
+}
+
+

@@ -1,6 +1,6 @@
+
 import { Component, OnInit, Inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { APP_CONSTANTS } from '@app/app.constants';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import { ModalComponent } from '@components/modal/modal.component';
 import { WeeksService } from '@services/weeks/weeks.service';
@@ -8,15 +8,16 @@ import { PremiersService } from '@services/premiers/premiers.service';
 import { CitiesService } from '@services/cities/cities.service';
 
 import {
-  WeeksResponse,
-  PremiersResponse,
-  Premiere,
   CitiesResponse,
-  Citiy,
-  SuccessReponse,
-  PremiereSelected,
+  City,
   GetPremieresForecast,
-  PremiereForecast
+  Premiere,
+  PremiereForecast,
+  PremiereSelected,
+  PremiereToGenerateForecast,
+  PremiersResponse,
+  SuccessReponse,
+  WeeksResponse
 } from '@interfaces/response';
 
 @Component({
@@ -28,15 +29,17 @@ export class HomeComponent implements OnInit {
   date: string;
   week: number;
   premieres: Premiere[] = [];
-  cities: Citiy[] = [];
+  cities: City[] = [];
   premieresListSelected: string[];
   showParamsSection = false;
   premieresForecast: PremiereForecast[] = [];
+  premieresForecastSelected: PremiereForecast;
   premiereToAddParams: Premiere;
-  premiereToGenerateForecast = {
+  premiereToGenerateForecast: PremiereToGenerateForecast = {
     Inputs: [],
     GlobalParameters: {}
   };
+  citySelected: City;
 
   constructor(
     private weeksService: WeeksService,
@@ -45,7 +48,7 @@ export class HomeComponent implements OnInit {
     private router: Router,
     public dialog: MatDialog
   ) { }
-  
+
   ngOnInit() { }
 
   getItems() {
@@ -57,10 +60,9 @@ export class HomeComponent implements OnInit {
    */
   openModal() {
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.data = this.premiereToAddParams;
+    dialogConfig.data = this.premieresForecastSelected;
     dialogConfig.width = '700px';
     dialogConfig.height = '560px';
-    console.log(this.premiereToAddParams)
     const dialogRef = this.dialog.open(ModalComponent, dialogConfig);
 
     dialogRef.afterClosed().subscribe(params => {
@@ -69,14 +71,16 @@ export class HomeComponent implements OnInit {
       paramsFromModal.map(item => premiereToSave[item.Id] = item.value);
 
       // tslint:disable-next-line: no-string-literal
-      premiereToSave['Cod_pelicula'] = this.premiereToAddParams.Cod_pelicula;
-      const premiereFound = { ...this.premieres.find(premire => premire.Cod_pelicula === this.premiereToAddParams.Cod_pelicula) }
-      premiereFound.ReleaseDate = this.date;
-      this.premiereToGenerateForecast.Inputs.push(premiereFound);
+      premiereToSave['Cod_pelicula'] = this.premieresForecastSelected.id_movie;
 
-      this.premiersService.postPremiereParameterized({Value: premiereToSave}, this.week).subscribe(response => {
-        console.log(response);
-        // TODO: remove items of dropdown
+      this.premiersService.postPremiereParameterized(
+        { Value: premiereToSave },
+        this.week,
+        this.premieresForecastSelected.id_movie
+      ).subscribe((response: Premiere) => {
+        const res = { ...response };
+        delete res.params;
+        this.premiereToGenerateForecast.Inputs.push(res);
       }, error => { });
     });
   }
@@ -86,8 +90,7 @@ export class HomeComponent implements OnInit {
    */
   getWeeks() {
     this.weeksService.getWeeks(this.date).subscribe((response: WeeksResponse) => {
-      setTimeout(()=>{ this.week = Number(response.num_semana) }, 1000)
-      //this.week = Number(response.num_semana);
+      this.week = Number(response.num_semana);
     }, error => { });
   }
 
@@ -123,11 +126,11 @@ export class HomeComponent implements OnInit {
    */
   savePremiereForecast() {
     const premiereSelected: PremiereSelected[] = [];
-/*     this.premieresListSelected.map(
+    this.premieresListSelected.map(
       premiere => premiereSelected.push({ num_semana: String(this.week), id_pelicula: premiere })
-    ); */
+    );
     this.premiersService.postAddForecastPremier(premiereSelected).subscribe((response: SuccessReponse) => {
-      this.showParamsSection = response.Result === 200;
+      this.showParamsSection = response.Result === 'OK';
       if (this.showParamsSection) {
         this.getPremiereForecast();
       }
@@ -138,9 +141,8 @@ export class HomeComponent implements OnInit {
    * Get premiere forecast
    */
   getPremiereForecast() {
-    this.premiersService.getForecastPremiers().subscribe((response: GetPremieresForecast) => {
-      setTimeout(()=>{ this.premieresForecast = response.Value }, 2000)
-      //this.premieresForecast = response.Value;
+    this.premiersService.getForecastPremiers(this.citySelected.id, this.week).subscribe((response: GetPremieresForecast) => {
+      this.premieresForecast = response.value;
     });
   }
 
@@ -150,6 +152,6 @@ export class HomeComponent implements OnInit {
   generateForecast() {
     this.premiersService.postGenerateForecast(this.premiereToGenerateForecast).subscribe(() => {
       this.router.navigateByUrl('/generated');
-    }, error => {});
+    }, error => { });
   }
 }

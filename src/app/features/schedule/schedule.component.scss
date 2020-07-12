@@ -1,0 +1,19 @@
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+mat-card + mat-card {
+    margin-top: 24px;
+}
+
+
+.table {
+    width: 100%;
+}
+
+
+mat-card-actions,
+.center {
+    text-align: center;
+}

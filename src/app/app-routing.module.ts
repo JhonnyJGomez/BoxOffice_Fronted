@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { NotFoundComponent } from '@app/features/not-found/not-found.component';
 import { MainComponent } from '@app/layous/main/main.component';
 import { HomeComponent } from '@app/features/home/home.component';
-import { APP_CONSTANTS } from '@app/app.constants';
 import { GeneratedComponent } from './features/generated/generated.component';
+import { ScheduleComponent } from './features/schedule/schedule.component';
 
 const routes: Routes = [
   {
@@ -23,6 +23,10 @@ const routes: Routes = [
       {
         path: 'generated',
         component: GeneratedComponent
+      },
+      {
+        path: 'generate-schedule',
+        component: ScheduleComponent
       }
     ]
   },

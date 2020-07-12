@@ -40,8 +40,14 @@ export class MainComponent implements OnInit {
     },
     {
       label: 'Ejecutar',
-      disabled: true,
+      disabled: false,
       expanded: false,
+      items: [
+        {
+          label: 'Generar Programación',
+          route: '/generate-schedule'
+        }
+      ]
     },
     /*{
       label: 'Controlar',

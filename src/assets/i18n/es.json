@@ -1,3 +1,20 @@
 {
-    
+    "schedule": {
+        "title": "Generar Programación",
+        "table": {
+            "title": "Forecast",
+            "movies": "Peliculas",
+            "prediction": "Predicción",
+            "participation": "Participación"
+        }
+    },
+    "global": {
+        "city": "Ciudad",
+        "premiere-week": "Semana de Estreno",
+        "number-week": "Nº Semana",
+        "cinema": "Cine",
+        "average-ticket": "Ticket Promedio",
+        "apply": "Aplicar",
+        "parameterize": "Parametrizar"
+    }
 }

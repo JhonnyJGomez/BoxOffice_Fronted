@@ -18,11 +18,11 @@ export class PremiersService implements OnInit {
   constructor(
     private http: HttpClient
   ) {
-    this.url = APP_CONSTANTS.API.GET_PREMIERS;
-    this.urlPostAddForecastPremiere = APP_CONSTANTS.API.POST_FORECAST_PREMIERE;
-    this.urlGetForecastPremiere = APP_CONSTANTS.API.GET_FORECAST_PREMIERS;
-    this.urlPostPremiereParameterized = APP_CONSTANTS.API.POST_PREMIERE_PARAMETERIZED;
-    this.urlPostGenerateForecast = APP_CONSTANTS.API.POST_GENERATE_FORECAST;
+    this.url = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.GET_PREMIERS;
+    this.urlPostAddForecastPremiere = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.POST_FORECAST_PREMIERE;
+    this.urlGetForecastPremiere = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.GET_FORECAST_PREMIERS;
+    this.urlPostPremiereParameterized = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.POST_PREMIERE_PARAMETERIZED;
+    this.urlPostGenerateForecast = APP_CONSTANTS.API.AZURE;
     this.httpOptions = {
       headers: new HttpHeaders(APP_CONSTANTS.HTTP_HEADERS)
     };
@@ -35,28 +35,36 @@ export class PremiersService implements OnInit {
    * Get premiers
    */
   getPremiers(week: number): Observable<{}> {
-    return this.http.get(this.url.replace('{week}', String(week)), this.httpOptions);
+    return this.http.get(this.url.replace('{week}', String(week)));
   }
 
   /**
    * post premiere forecast
    */
   postAddForecastPremier(premiereSelected: PremiereSelected[]): Observable<{}> {
-    return this.http.post(this.urlPostAddForecastPremiere, premiereSelected, this.httpOptions);
+    return this.http.post(this.urlPostAddForecastPremiere, premiereSelected);
   }
 
   /**
    * get premiere forecast
    */
-  getForecastPremiers(): Observable<{}> {
-    return this.http.get(this.urlGetForecastPremiere, this.httpOptions);
+  getForecastPremiers(cityId: number, week: number): Observable<{}> {
+    return this.http.get(
+      this.urlGetForecastPremiere
+        .replace('{cityId}', String(cityId))
+        .replace('{week}', String(week)),
+      this.httpOptions);
   }
 
   /**
    * post premiere parameterized
    */
-  postPremiereParameterized(data: {}, week: number): Observable<{}> {
-    return this.http.post(this.urlPostPremiereParameterized.replace('{week}', String(week)), data, this.httpOptions);
+  postPremiereParameterized(data: {}, week: number, movieId: number): Observable<{}> {
+    return this.http.post(
+      this.urlPostPremiereParameterized
+        .replace('{week}', String(week))
+        .replace('{movieId}', String(movieId)),
+      data);
   }
 
   /**

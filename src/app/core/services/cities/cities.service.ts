@@ -13,10 +13,7 @@ export class CitiesService implements OnInit {
   constructor(
     private http: HttpClient
   ) {
-    this.url = APP_CONSTANTS.API.GET_CITIES;
-    this.httpOptions = {
-      headers: new HttpHeaders(APP_CONSTANTS.HTTP_HEADERS)
-    };
+    this.url = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.GET_CITIES;
   }
 
   ngOnInit() {
@@ -27,6 +24,6 @@ export class CitiesService implements OnInit {
    *
    */
   getCities(): Observable<{}> {
-    return this.http.get(this.url, this.httpOptions);
+    return this.http.get(this.url);
   }
 }

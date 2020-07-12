@@ -1,0 +1,108 @@
+<mat-card>
+  <mat-card-title>{{ "schedule.title" | translate }}</mat-card-title>
+  <mat-card-content class="wrapper">
+    <mat-card>
+      <mat-grid-list cols="3" rowHeight="100">
+        <mat-grid-tile>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="{{ 'global.premiere-week' | translate }}"
+              type="date"
+              [(ngModel)]="date"
+            />
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="{{ 'global.number-week' | translate }}"
+              type="number"
+              [(ngModel)]="week"
+            />
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field class="select-parameters">
+            <mat-label>{{ "global.city" | translate }}</mat-label>
+            <mat-select [(ngModel)]="citySelected">
+              <mat-option
+                name="premiereToAddParams"
+                ngDefaultControl
+                *ngFor="let city of cities"
+                [value]="city"
+              >
+                {{ city.ciudad }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list cols="3" rowHeight="100">
+        <mat-grid-tile>
+          <mat-form-field class="select-parameters">
+            <mat-label>{{ "global.cinema" | translate }}</mat-label>
+            <mat-select [(ngModel)]="citySelected">
+              <mat-option
+                name="premiereToAddParams"
+                ngDefaultControl
+                *ngFor="let cinema of cinemas"
+                [value]="cinema"
+              >
+                {{ cinema.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="{{ 'global.average-ticket' | translate }}"
+              type="number"
+              [(ngModel)]="week"
+            />
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list cols="3" rowHeight="40" class="center">
+        <button mat-raised-button color="warn" (click)="loadData()">
+          {{ "global.apply" | translate }}
+        </button>
+      </mat-grid-list>
+    </mat-card>
+    <mat-card>
+      <mat-card-title>{{ "schedule.table.title" | translate }}</mat-card-title>
+      <mat-card-content>
+        <table mat-table [dataSource]="dataSource" class="table">
+          <ng-container matColumnDef="movies">
+            <th mat-header-cell *matHeaderCellDef>
+              {{ "schedule.table.movies" | translate }}
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.Rank }}</td>
+          </ng-container>
+          <ng-container matColumnDef="prediction">
+            <th mat-header-cell *matHeaderCellDef>
+              {{ "schedule.table.prediction" | translate }}
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.Title }}</td>
+          </ng-container>
+          <ng-container matColumnDef="participation">
+            <th mat-header-cell *matHeaderCellDef>
+              {{ "schedule.table.participation" | translate }}
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.Rating }}</td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="warn" (click)="loadData()">
+          {{ "global.parameterize" | translate }}
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-card-content>
+</mat-card>
