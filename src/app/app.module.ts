@@ -35,21 +35,22 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
-import { AppComponent } from './app.component';
-import { APP_CONSTANTS } from './app.constants';
-import { AppRoutingModule } from './app-routing.module';
 import { CookieService } from 'ngx-cookie-service';
-import { HomeComponent } from './features/home/home.component';
-import { MainComponent } from './layous/main/main.component';
-import { NotFoundComponent } from './features/not-found/not-found.component';
-import { SharedModule } from './shared/shared.module';
-import { ModalComponent } from '@components/modal/modal.component';
-import { GeneratedComponent } from './features/generated/generated.component';
-import { EnvironmentInterceptor } from './core/interceptors/environment-interceptor';
-import { MockData } from './test-helpers/mock-data';
-import { ScheduleComponent } from './features/schedule/schedule.component';
 
+import { APP_CONSTANTS } from './app.constants';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { EnvironmentInterceptor } from '@app/core/interceptors/environment-interceptor';
+import { GeneratedComponent } from '@app/features/generated/generated.component';
+import { HomeComponent } from '@app/features/home/home.component';
+import { MainComponent } from './layous/main/main.component';
+import { MockData } from './test-helpers/mock-data';
+import { ModalComponent } from '@components/modal/modal.component';
+import { ModalProgramsComponent } from '@components/modal-programs/modal-programs.component';
+import { NotFoundComponent } from '@app/features/not-found/not-found.component';
+import { ScheduleComponent } from '@app/features/schedule/schedule.component';
+import { SharedModule } from './shared/shared.module';
+import { ViewScheduleComponent } from '@app/features/view-schedule/view-schedule.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,9 @@ import { ScheduleComponent } from './features/schedule/schedule.component';
     GeneratedComponent,
     MainComponent,
     ModalComponent,
-    ScheduleComponent
+    ModalProgramsComponent,
+    ScheduleComponent,
+    ViewScheduleComponent
   ],
   imports: [
     BrowserModule,
@@ -123,7 +126,8 @@ import { ScheduleComponent } from './features/schedule/schedule.component';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],
   entryComponents: [
-    ModalComponent
+    ModalComponent,
+    ModalProgramsComponent
   ]
 })
 export class AppModule { }

@@ -9,11 +9,13 @@ import { APP_CONSTANTS } from '@app/app.constants';
 })
 export class ParamsService implements OnInit {
   url: string;
+  urlParamsProgram: string;
   httpOptions = {};
   constructor(
     private http: HttpClient
   ) {
     this.url = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.GET_PARAMS;
+    this.urlParamsProgram = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.GET_PARAMS_PROGRAM;
   }
 
   ngOnInit() {
@@ -21,9 +23,16 @@ export class ParamsService implements OnInit {
 
   /**
    * Get params
-   *
    */
   getParams(): Observable<{}> {
     return this.http.get(this.url);
+  }
+
+  /**
+   * Get params
+   *
+   */
+  getParamsPrograms(): Observable<{}> {
+    return this.http.get(this.urlParamsProgram);
   }
 }

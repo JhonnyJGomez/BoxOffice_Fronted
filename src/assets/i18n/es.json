@@ -1,4 +1,7 @@
 {
+    "define": {
+        "title": "Estrenos Forecast"
+    },
     "schedule": {
         "title": "Generar Programación",
         "table": {
@@ -8,6 +11,11 @@
             "participation": "Participación"
         }
     },
+    "view-schedule": {
+        "title": "Estrenos definidos",
+        "subtitle": "Número de semana: {{week}}",
+        "cinema": "Cine: {{cinema}}"
+    },
     "global": {
         "city": "Ciudad",
         "premiere-week": "Semana de Estreno",
@@ -15,6 +23,11 @@
         "cinema": "Cine",
         "average-ticket": "Ticket Promedio",
         "apply": "Aplicar",
-        "parameterize": "Parametrizar"
+        "parameterize": "Parametrizar",
+        "generate-schedule": "GENERAR PROGRAMACIÓN "
+    },
+    "modal-schedule": {
+        "title": "Parámetros - PROGRAMACIÓN",
+        "save": "Guardar configuración"
     }
 }

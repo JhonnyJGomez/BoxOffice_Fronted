@@ -1,0 +1,18 @@
+<mat-card *ngIf="schedule">
+  <mat-card-title>{{ "view-schedule.title" | translate }}</mat-card-title>
+  <mat-card-subtitle>
+    <span>
+      {{ "view-schedule.subtitle" | translate: { week: schedule.id_semana } }}
+    </span>
+  </mat-card-subtitle>
+  <mat-card-subtitle>
+    <span>
+      {{ "view-schedule.cinema" | translate: { cinema: schedule.nom_cine } }}
+    </span>
+  </mat-card-subtitle>
+  <mat-card-content class="wrapper">
+    <mat-card *ngFor="let day of schedule.days" class="day-wrapper">
+      {{ day.day }}
+    </mat-card>
+  </mat-card-content>
+</mat-card>

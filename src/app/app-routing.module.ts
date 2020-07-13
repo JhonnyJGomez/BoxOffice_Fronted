@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { NotFoundComponent } from '@app/features/not-found/not-found.component';
-import { MainComponent } from '@app/layous/main/main.component';
+
+import { GeneratedComponent } from '@app/features/generated/generated.component';
 import { HomeComponent } from '@app/features/home/home.component';
-import { GeneratedComponent } from './features/generated/generated.component';
-import { ScheduleComponent } from './features/schedule/schedule.component';
+import { MainComponent } from '@app/layous/main/main.component';
+import { NotFoundComponent } from '@app/features/not-found/not-found.component';
+import { ScheduleComponent } from '@app/features/schedule/schedule.component';
+import { ViewScheduleComponent } from '@app/features/view-schedule/view-schedule.component';
 
 const routes: Routes = [
   {
@@ -27,6 +29,10 @@ const routes: Routes = [
       {
         path: 'generate-schedule',
         component: ScheduleComponent
+      },
+      {
+        path: 'view-schedule/:forecast',
+        component: ViewScheduleComponent
       }
     ]
   },

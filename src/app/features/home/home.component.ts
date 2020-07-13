@@ -2,10 +2,11 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog, MatDialogConfig } from '@angular/material';
-import { ModalComponent } from '@components/modal/modal.component';
-import { WeeksService } from '@services/weeks/weeks.service';
-import { PremiersService } from '@services/premiers/premiers.service';
+
 import { CitiesService } from '@services/cities/cities.service';
+import { ModalComponent } from '@components/modal/modal.component';
+import { PremiersService } from '@services/premiers/premiers.service';
+import { WeeksService } from '@services/weeks/weeks.service';
 
 import {
   CitiesResponse,

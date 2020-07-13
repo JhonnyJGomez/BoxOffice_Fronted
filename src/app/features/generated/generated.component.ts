@@ -65,8 +65,7 @@ export class GeneratedComponent implements OnInit {
 
   ngOnInit() {
     this.scoreService.getScore().subscribe((response: ScoreResponse) => {
-      setTimeout(()=>{ this.dataSource = response.Results.output1 }, 4000)
-     // this.dataSource = response.Results.output1;
+      this.dataSource = response.Results.output1;
     }, () => {
       console.log('error');
     });

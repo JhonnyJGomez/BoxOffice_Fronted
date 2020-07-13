@@ -10,7 +10,12 @@ export const APP_CONSTANTS = {
         GET_FORECAST_PREMIERS: '/forecasts?id_ciudad={cityId}&num_semana={week}',
         GET_PARAMS: '/parametros',
         POST_PREMIERE_PARAMETERIZED: '/peliculas_parametrizar?num_semana={week}&id_pelicula={movieId}',
-        POST_GENERATE_FORECAST: '/forecast/generate_forecast'
+        POST_GENERATE_FORECAST: '/forecast/generate_forecast',
+        GET_CINEMAS: '/cines?cod_ciudad={cityId}',
+        GET_PARAMS_PROGRAM: '/param_program',
+        POST_SAVE_PARAM_PROGRAM: '/registra_param_program',
+        GENERATE_SCHEDULE: '/generar_programacion',
+        GET_SCHEDULE: '/generar_programacion?forecast={forecast}'
     },
     HTTP_HEADERS: {
         'Content-Type': 'application/json',

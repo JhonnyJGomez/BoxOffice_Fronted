@@ -44,8 +44,15 @@ export interface City {
     id: number;
 }
 
+export interface CinemaResponse {
+    value: Cinema[];
+}
+
 export interface Cinema {
-    name: string;
+    cod_ciudad: number;
+    id: string;
+    nom_cine: string;
+    ticket_promedio: number;
 }
 
 export interface SuccessReponse {
@@ -65,6 +72,8 @@ export interface PremiereForecast {
     cod_forecast: number;
     id_movie: number;
     nom_pelicula: string;
+    forecast: number;
+    participacion: number;
 }
 
 export interface ParamsResponse {
@@ -91,4 +100,54 @@ export interface PremiereToGenerateForecast  {
     GlobalParameters: {};
 }
 
+export interface ParamsProgramResponse {
+    value: ParamProgram[];
+}
 
+export interface ParamProgram {
+    Id: string;
+    Atributo: string;
+    Type: string;
+    value: string | boolean | boolean[];
+}
+
+export interface ParamProgramToSave {
+    value: {
+        id_forecast: number;
+        id_parametro: number;
+        value: boolean | string;
+    }[];
+}
+
+export interface SaveForecastData {
+    forecast: number;
+}
+
+export interface Schedule {
+    days: {
+        id: number;
+        day: string;
+    }[];
+    id_cine: string;
+    id_forecast: string;
+    id_semana: string;
+    movies: {
+        id_movie: number;
+        title: string;
+        shows: {
+            day: number;
+            final: string;
+            screen: number;
+            screen_cap: string;
+            start: string;
+            time: number;
+        }[];
+    }[];
+    nom_cine: string;
+    times: {
+        id: number;
+        time: string;
+        start: string;
+        end: string;
+    }[];
+}
