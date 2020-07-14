@@ -38,6 +38,8 @@ export class EnvironmentInterceptor implements HttpInterceptor {
                 mockResponse.body = this.mockData.postPremiereParameterized();
             } else if (req.url.match('forecast/generate_forecast')) {
                 mockResponse.body = this.mockData.postGenerateForecast();
+            } else if (req.url.match('generar_programacion')) {
+                mockResponse.body = this.mockData.getSchedule();
             }
 
             if (mockResponse.body) {

@@ -13,6 +13,40 @@
   <mat-card-content class="wrapper">
     <mat-card *ngFor="let day of schedule.days" class="day-wrapper">
       {{ day.day }}
+      <table class="schedule-table">
+        <thead>
+          <tr role="row">
+            <th></th>
+            <th
+              *ngFor="let screen of schedule.screens; let indexScreen = index"
+            >
+              {{ screen.screen }}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let time of schedule.times; let indexTime = index">
+            <td class="time-header">
+              {{ time.time }}
+            </td>
+            <td
+              *ngFor="let screen of schedule.screens; let indexScreen = index"
+            >
+              <span
+                *ngIf="
+                  movies[indexScreen] && movies[indexScreen][indexTime];
+                  else elseBlock
+                "
+              >
+                {{ movies[indexScreen][indexTime].title }}
+              </span>
+              <ng-template #elseBlock>
+                {{ "schedule.table.empty-show" | translate }}
+              </ng-template>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </mat-card>
   </mat-card-content>
 </mat-card>

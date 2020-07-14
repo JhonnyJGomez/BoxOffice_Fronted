@@ -150,4 +150,9 @@ export interface Schedule {
         start: string;
         end: string;
     }[];
+    screens: {
+        id: number;
+        screen: string;
+        cap: number;
+    }[];
 }

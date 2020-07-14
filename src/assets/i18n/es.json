@@ -8,7 +8,8 @@
             "title": "Forecast",
             "movies": "Peliculas",
             "prediction": "Predicción",
-            "participation": "Participación"
+            "participation": "Participación",
+            "empty-show": "Vacío"
         }
     },
     "view-schedule": {

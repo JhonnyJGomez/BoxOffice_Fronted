@@ -12,6 +12,7 @@ import { ScheduleService } from '@services/schedule/schedule.service';
 export class ViewScheduleComponent implements OnInit {
   forecast: number;
   schedule: Schedule;
+  movies = [];
 
   constructor(
     private scheduleService: ScheduleService,
@@ -31,6 +32,13 @@ export class ViewScheduleComponent implements OnInit {
   getSchedule(): void {
     this.scheduleService.getSchedule(this.forecast).subscribe((response: Schedule) => {
       this.schedule = response;
+      this.schedule.movies.forEach((movie, index: number) => {
+        movie.shows.forEach(show => {
+          !this.movies[show.screen] ?
+            this.movies[show.screen] = new Array(this.schedule.screens.length) :
+            this.movies[show.screen][show.time] = movie;
+        });
+      });
     }, error => {});
   }
 }
