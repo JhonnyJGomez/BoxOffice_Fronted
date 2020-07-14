@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
 import { ScoreService } from '@services/score/score.service';
 import { ScoreResponse, Output } from '@interfaces/response';
 
@@ -58,13 +60,24 @@ export class GeneratedComponent implements OnInit {
 
   dataSource: Output[] = [];
   displayedColumns: string[] = ['Rank', 'Title', 'Rating', 'Dist', 'Genre', 'ReleaseDate', 'Scored Labels'];
+  codeForecast: number;
 
   constructor(
-    private scoreService: ScoreService
+    private scoreService: ScoreService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
-    this.scoreService.getScore().subscribe((response: ScoreResponse) => {
+    this.route.params.subscribe(params => {
+      this.codeForecast = params.codeForecast;
+      this.getScore();
+    });
+
+  }
+
+  /** Gets Score */
+  getScore() {
+    this.scoreService.getScore(this.codeForecast).subscribe((response: ScoreResponse) => {
       this.dataSource = response.Results.output1;
     }, () => {
       console.log('error');

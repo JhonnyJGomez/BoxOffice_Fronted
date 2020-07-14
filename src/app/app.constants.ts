@@ -16,7 +16,8 @@ export const APP_CONSTANTS = {
         POST_SAVE_PARAM_PROGRAM: '/registra_param_program',
         GENERATE_SCHEDULE: '/generar_programacion',
         POST_GENERATE_FORECAST_V2: '/generar_forecast_v2',
-        GET_SCHEDULE: '/generar_programacion?forecast={forecast}'
+        GET_SCHEDULE: '/generar_programacion?forecast={forecast}',
+        GET_FORECAST_V2: '/generar_forecast_v2?cod_forecast={codeForecast}'
     },
     HTTP_HEADERS: {
         'Content-Type': 'application/json',

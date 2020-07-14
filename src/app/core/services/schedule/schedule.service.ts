@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { APP_CONSTANTS } from '@app/app.constants';
-import { ParamProgramToSave, SaveForecastData } from '@interfaces/response';
+import { ParamProgramToSave, SaveForecastData, GeneratedSchedule } from '@interfaces/response';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,7 @@ export class ScheduleService implements OnInit {
   ) {
     this.urlSaveParams = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.POST_SAVE_PARAM_PROGRAM;
     this.urlGenerateSchedule = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.GENERATE_SCHEDULE;
-    this.urlGetSchedule = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.GENERATE_SCHEDULE;
+    this.urlGetSchedule = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.GET_SCHEDULE;
   }
 
   ngOnInit() {
@@ -34,8 +34,8 @@ export class ScheduleService implements OnInit {
   /**
    * Generate schedule
    */
-  generateSchedule(saveForecastData: SaveForecastData): Observable<{}> {
-    return this.http.post(this.urlGenerateSchedule, saveForecastData);
+  generateSchedule(saveForecastData: SaveForecastData): Observable<GeneratedSchedule> {
+    return this.http.post<GeneratedSchedule>(this.urlGenerateSchedule, saveForecastData);
   }
 
   /**

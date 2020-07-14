@@ -158,3 +158,13 @@ export interface Schedule {
         cap: number;
     }[];
 }
+
+export interface GeneratedForecast {
+    cod_forecast: number;
+}
+
+
+export interface GeneratedSchedule {
+    cod_forecast: number;
+    status: string;
+}

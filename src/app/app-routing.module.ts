@@ -23,7 +23,7 @@ const routes: Routes = [
         component: HomeComponent
       },
       {
-        path: 'generated',
+        path: 'generated/:codeForecast',
         component: GeneratedComponent
       },
       {

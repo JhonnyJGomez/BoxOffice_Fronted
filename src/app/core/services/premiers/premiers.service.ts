@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { APP_CONSTANTS } from '@app/app.constants';
-import { PremiereSelected } from '@interfaces/response';
+import { PremiereSelected, GeneratedForecast } from '@interfaces/response';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +22,7 @@ export class PremiersService implements OnInit {
     this.urlPostAddForecastPremiere = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.POST_FORECAST_PREMIERE;
     this.urlGetForecastPremiere = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.GET_FORECAST_PREMIERS;
     this.urlPostPremiereParameterized = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.POST_PREMIERE_PARAMETERIZED;
+    // TODO: uncomment when the endpoint is working as expected
     // this.urlPostGenerateForecast = APP_CONSTANTS.API.AZURE;
     this.urlPostGenerateForecast = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.POST_GENERATE_FORECAST_V2;
     this.httpOptions = {
@@ -71,7 +72,7 @@ export class PremiersService implements OnInit {
   /**
    * post generate forecast
    */
-  postGenerateForecast(data: {}): Observable<{}> {
-    return this.http.post(this.urlPostGenerateForecast, data, this.httpOptions);
+  postGenerateForecast(data: {}): Observable<GeneratedForecast> {
+    return this.http.post<GeneratedForecast>(this.urlPostGenerateForecast, data, this.httpOptions);
   }
 }

@@ -151,8 +151,8 @@ export class HomeComponent implements OnInit {
    * Generate forecast
    */
   generateForecast() {
-    this.premiersService.postGenerateForecast(this.premiereToGenerateForecast).subscribe(() => {
-      this.router.navigateByUrl('/generated');
+    this.premiersService.postGenerateForecast(this.premiereToGenerateForecast).subscribe(response => {
+      this.router.navigateByUrl('/generated/' + response.cod_forecast);
     }, error => { });
   }
 }

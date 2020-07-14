@@ -29,13 +29,7 @@ export class ScoreService implements OnInit {
   constructor(
     private http: HttpClient
   ) {
-    this.generateURL = APP_CONSTANTS.API.BASE;
-    this.httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        Authorization: 'Bearer qNkxIum11cJiiB6LiYnu+SrIiN3G73ytQl89y4kVsXvR80xGyHW8GtPTVLCgbJXSg6wPas/o7ti/MooXDWNADg=='
-      })
-    };
+    this.generateURL = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.GET_FORECAST_V2;
   }
 
   ngOnInit() {
@@ -45,7 +39,7 @@ export class ScoreService implements OnInit {
    * Get the score
    *
    */
-  getScore(): Observable<{}> {
-    return this.http.post(this.generateURL, this.data, this.httpOptions);
+  getScore(codeForecast: number): Observable<{}> {
+    return this.http.get(this.generateURL.replace('{codeForecast}', String(codeForecast)));
   }
 }

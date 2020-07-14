@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 
 import { CinemaService } from '@services/cinema/cinema.service';
@@ -56,6 +57,7 @@ export class ScheduleComponent implements OnInit {
     private premiersService: PremiersService,
     private weeksService: WeeksService,
     private scheduleService: ScheduleService,
+    private router: Router,
     public dialog: MatDialog
   ) { }
 
@@ -142,7 +144,11 @@ export class ScheduleComponent implements OnInit {
   generateSchedule() {
     this.saveForecastData.forecast = this.premieresForecast[0].cod_forecast;
     this.scheduleService.generateSchedule(this.saveForecastData).subscribe(response => {
-      console.log(response);
+      if (response.status === 'Generated') {
+        this.router.navigateByUrl('/view-schedule/' + response.cod_forecast);
+      } else {
+        console.log('Un error ha ocurrido generando la programación');
+      }
     }, error => {});
   }
 }
