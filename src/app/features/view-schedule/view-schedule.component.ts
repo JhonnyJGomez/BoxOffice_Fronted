@@ -34,9 +34,15 @@ export class ViewScheduleComponent implements OnInit {
       this.schedule = response;
       this.schedule.movies.forEach((movie, index: number) => {
         movie.shows.forEach(show => {
+          const movieToAdd = {
+            ...movie,
+            start: show.start,
+            final: show.final
+          };
+
           !this.movies[show.screen] ?
             this.movies[show.screen] = new Array(this.schedule.screens.length) :
-            this.movies[show.screen][show.time] = movie;
+            this.movies[show.screen][show.time] = movieToAdd;
         });
       });
     }, error => {});

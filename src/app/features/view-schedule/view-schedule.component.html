@@ -12,7 +12,9 @@
   </mat-card-subtitle>
   <mat-card-content class="wrapper">
     <mat-card *ngFor="let day of schedule.days" class="day-wrapper">
-      {{ day.day }}
+      <span class="day-header">
+        {{ day.day }}
+      </span>
       <table class="schedule-table">
         <thead>
           <tr role="row">
@@ -20,7 +22,8 @@
             <th
               *ngFor="let screen of schedule.screens; let indexScreen = index"
             >
-              {{ screen.screen }}
+              <span> {{ screen.screen }} </span>
+              <span> ({{ screen.cap }}) </span>
             </th>
           </tr>
         </thead>
@@ -38,7 +41,10 @@
                   else elseBlock
                 "
               >
-                {{ movies[indexScreen][indexTime].title }}
+                <span class="movie-data">{{ movies[indexScreen][indexTime].title }}</span>
+                <span class="movie-data">{{ movies[indexScreen][indexTime].genre }} - {{ movies[indexScreen][indexTime].cens }}</span>
+                <span class="movie-data">{{ movies[indexScreen][indexTime].start || 'hora no definida' }}</span>
+                <span class="movie-data">{{ movies[indexScreen][indexTime].final || 'hora no definida' }}</span>
               </span>
               <ng-template #elseBlock>
                 {{ "schedule.table.empty-show" | translate }}

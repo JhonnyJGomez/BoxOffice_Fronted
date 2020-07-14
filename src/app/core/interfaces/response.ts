@@ -134,6 +134,8 @@ export interface Schedule {
     movies: {
         id_movie: number;
         title: string;
+        genre: string;
+        cens: string;
         shows: {
             day: number;
             final: string;
