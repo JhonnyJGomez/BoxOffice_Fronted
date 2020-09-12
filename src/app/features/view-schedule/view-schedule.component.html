@@ -43,8 +43,8 @@
               >
                 <span class="movie-data">{{ movies[indexScreen][indexTime].title }}</span>
                 <span class="movie-data">{{ movies[indexScreen][indexTime].genre }} - {{ movies[indexScreen][indexTime].cens }}</span>
-                <span class="movie-data">{{ movies[indexScreen][indexTime].start || 'hora no definida' }}</span>
-                <span class="movie-data">{{ movies[indexScreen][indexTime].final || 'hora no definida' }}</span>
+                <span class="movie-data">{{ movies[indexScreen][indexTime].start || '' }}</span>
+                <span class="movie-data">{{ movies[indexScreen][indexTime].final || '' }}</span>
               </span>
               <ng-template #elseBlock>
                 {{ "schedule.table.empty-show" | translate }}
