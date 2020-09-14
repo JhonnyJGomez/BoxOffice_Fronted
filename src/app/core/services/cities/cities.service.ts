@@ -24,6 +24,8 @@ export class CitiesService implements OnInit {
    *
    */
   getCities(): Observable<{}> {
-    return this.http.get(this.url);
+     
+    return this.http.get('/api/ciudades');
+    //return this.http.get(this.url);
   }
 }

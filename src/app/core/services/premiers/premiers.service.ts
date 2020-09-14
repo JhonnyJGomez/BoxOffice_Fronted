@@ -37,7 +37,9 @@ export class PremiersService implements OnInit {
    * Get premiers
    */
   getPremiers(week: number): Observable<{}> {
-    return this.http.get(this.url.replace('{week}', String(week)));
+    return this.http.get('/api/peliculas_semanas?num_semana='+ String(week));
+    
+    //return this.http.get(this.url.replace('{week}', String(week)));
   }
 
   /**

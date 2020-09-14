@@ -50,22 +50,22 @@ export class MockData {
     GET_CITIES = {
         value: [
             {
-                ciudad: 'Lima'
+                nom_ciudad: 'Lima'
             },
             {
-                ciudad: 'Arequipa'
+                nom_ciudad: 'Arequipa'
             },
             {
-                ciudad: 'Trujillo'
+                nom_ciudad: 'Trujillo'
             },
             {
-                ciudad: 'Huanuco'
+                nom_ciudad: 'Huanuco'
             },
             {
-                ciudad: 'Cajarmarca'
+                nom_ciudad: 'Cajarmarca'
             },
             {
-                ciudad: 'Huancayo'
+                nom_ciudad: 'Huancayo'
             }
         ]
     };

@@ -65,13 +65,13 @@
             <mat-label>Ciudad</mat-label>
             <mat-select [(ngModel)]="citySelected">
               <mat-option *ngFor="let city of cities" [value]="city">
-                {{ city.ciudad }}
+                {{ city.nom_ciudad }}
               </mat-option>
             </mat-select>
           </mat-form-field>
         </mat-grid-tile>
       </mat-grid-list>
-    </mat-card>
+    </mat-card> 
     <mat-card *ngIf="showParamsSection">
       <mat-grid-list cols="2" rowHeight="100">
         <mat-grid-tile>

@@ -40,7 +40,7 @@ export interface CitiesResponse {
 }
 
 export interface City {
-    ciudad: string;
+    nom_ciudad: string;
     id: number;
 }
 
