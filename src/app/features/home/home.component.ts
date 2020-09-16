@@ -29,6 +29,7 @@ import {
 export class HomeComponent implements OnInit {
   date: string;
   week: number;
+  idWeek: number;
   premieres: Premiere[] = [];
   cities: City[] = [];
   premieresListSelected: string[];
@@ -92,6 +93,9 @@ export class HomeComponent implements OnInit {
   getWeeks() {
     this.weeksService.getWeeks(this.date).subscribe((response: WeeksResponse) => {
       this.week = Number(response.num_semana);
+      this.idWeek = response.id;
+      console.log("this.idWeek " + this.idWeek);
+
     }, error => { });
   }
 
@@ -99,25 +103,27 @@ export class HomeComponent implements OnInit {
    * Load premieres and cities data
    */
   loadData() {
-   // this.getPremiers();
+    this.getPremiers();
     this.getCities();
   }
 
-  /**
+  /** 
    * Get premieres
+   */
 
   getPremiers() {
-    this.premiersService.getPremiers(this.week).subscribe((response: PremiersResponse) => {
+    
+    this.premiersService.getPremiers(this.idWeek).subscribe((response: PremiersResponse) => {
       this.premieres = response.value;
       this.premieres.map(premiere => premiere.checked = false);
     }, error => { });
   }
-   */
+   
   /**
    * Get cities
    */
   getCities() {
-    console.log("entro en get cities");
+
     this.citiesService.getCities().subscribe((response: CitiesResponse) => {
       this.cities = response.value;
       console.log(response.value);

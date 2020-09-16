@@ -17,6 +17,7 @@ export interface Output {
 }
 
 export interface WeeksResponse {
+    id: number;
     num_semana: string;
 }
 
@@ -24,12 +25,23 @@ export interface PremiersResponse {
     value: Premiere[];
 }
 
-export interface Premiere {
+/* export interface Premiere {
     Cod_pelicula: string;
     title: string;
     Rating: string;
     Dist: string;
     Genre: string;
+    checked: boolean;
+    ReleaseDate?: string;
+    params?: any;
+} */
+
+export interface Premiere {
+    cod_pelicula: string;
+    titulo: string;
+    id_rating: string;
+    id_distributor: string;
+    id_genero: string;
     checked: boolean;
     ReleaseDate?: string;
     params?: any;

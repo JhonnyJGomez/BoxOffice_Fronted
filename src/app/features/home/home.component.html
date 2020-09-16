@@ -40,10 +40,10 @@
               <mat-selection-list [(ngModel)]="premieresListSelected">
                 <mat-list-option
                   [selected]="premiere.checked"
-                  [value]="premiere.Cod_pelicula"
+                  [value]="premiere.cod_pelicula"
                   *ngFor="let premiere of premieres"
                 >
-                  {{ premiere.Cod_pelicula }} {{ premiere.title }}
+                  {{ premiere.cod_pelicula }} {{ premiere.titulo }}
                 </mat-list-option>
               </mat-selection-list>
             </section>

@@ -27,6 +27,7 @@ export class MockData {
         }
     };
     GET_WEEKS = {
+        id: '25',
         num_semana: '25'
     };
     GET_PREMIERS = {

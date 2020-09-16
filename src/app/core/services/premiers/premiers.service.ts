@@ -30,14 +30,14 @@ export class PremiersService implements OnInit {
     };
   }
 
-  ngOnInit() {
+  ngOnInit() { 
   }
 
   /**
    * Get premiers
    */
-  getPremiers(week: number): Observable<{}> {
-    return this.http.get('/api/peliculas_semanas?num_semana='+ String(week));
+  getPremiers(idWeek: number): Observable<{}> {
+    return this.http.get('/api/peliculas_semanas?id_semana='+ String(idWeek));
     
     //return this.http.get(this.url.replace('{week}', String(week)));
   }
