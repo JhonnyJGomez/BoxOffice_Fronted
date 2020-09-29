@@ -94,7 +94,6 @@ export class HomeComponent implements OnInit {
     this.weeksService.getWeeks(this.date).subscribe((response: WeeksResponse) => {
       this.week = Number(response.num_semana);
       this.idWeek = response.id;
-      console.log("this.idWeek " + this.idWeek);
 
     }, error => { });
   }
@@ -125,8 +124,7 @@ export class HomeComponent implements OnInit {
   getCities() {
 
     this.citiesService.getCities().subscribe((response: CitiesResponse) => {
-      this.cities = response.value;
-      console.log(response.value);
+      this.cities = response.value; 
     }, error => { });
   }
 
@@ -135,8 +133,9 @@ export class HomeComponent implements OnInit {
    */
   savePremiereForecast() {
     const premiereSelected: PremiereSelected[] = [];
+    
     this.premieresListSelected.map(
-      premiere => premiereSelected.push({ num_semana: String(this.week), id_pelicula: premiere })
+      premiere => premiereSelected.push({ id_semana: String(this.idWeek), id_pelicula: premiere, id_ciudad: Number(this.citySelected.id)})
     );
     this.premiersService.postAddForecastPremier(premiereSelected).subscribe((response: SuccessReponse) => {
       this.showParamsSection = response.Result === 'OK';

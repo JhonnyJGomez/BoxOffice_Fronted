@@ -46,7 +46,8 @@ export class PremiersService implements OnInit {
    * post premiere forecast
    */
   postAddForecastPremier(premiereSelected: PremiereSelected[]): Observable<{}> {
-    return this.http.post(this.urlPostAddForecastPremiere, premiereSelected);
+    return this.http.post('/api/peliculas_forecast/create', premiereSelected); 
+    //return this.http.post(this.urlPostAddForecastPremiere, premiereSelected);
   }
 
   /**

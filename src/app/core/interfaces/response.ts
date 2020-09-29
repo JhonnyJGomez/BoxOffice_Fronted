@@ -37,6 +37,7 @@ export interface PremiersResponse {
 } */
 
 export interface Premiere {
+    id_pelicula: number;
     cod_pelicula: string;
     titulo: string;
     id_rating: string;
@@ -72,8 +73,9 @@ export interface SuccessReponse {
 }
 
 export interface PremiereSelected {
-    num_semana: string;
+    id_semana: string;
     id_pelicula: string;
+    id_ciudad: number;
 }
 
 export interface GetPremieresForecast {
