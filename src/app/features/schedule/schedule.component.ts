@@ -97,7 +97,7 @@ export class ScheduleComponent implements OnInit {
    */
   getPremiereForecast() {
     this.premiersService.getForecastPremiers(this.citySelected.id, this.week).subscribe((response: GetPremieresForecast) => {
-      this.premieresForecast = response.value;
+      this.premieresForecast = response.Value;
     });
   }
 
@@ -119,7 +119,7 @@ export class ScheduleComponent implements OnInit {
         }
 
         this.paramProgramToSave.value.push({
-          id_forecast: this.premieresForecast[0].cod_forecast,
+          id_forecast: this.premieresForecast[0].id_forecast,
           id_parametro: Number(item.Id),
           value: item.value
         });
@@ -142,7 +142,7 @@ export class ScheduleComponent implements OnInit {
    * Generate schedule
    */
   generateSchedule() {
-    this.saveForecastData.forecast = this.premieresForecast[0].cod_forecast;
+    this.saveForecastData.forecast = this.premieresForecast[0].id_forecast;
     this.scheduleService.generateSchedule(this.saveForecastData).subscribe(response => {
       if (response.status === 'Generated') {
         this.router.navigateByUrl('/view-schedule/' + response.cod_forecast);

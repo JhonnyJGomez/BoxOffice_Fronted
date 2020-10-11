@@ -63,15 +63,21 @@ export class HomeComponent implements OnInit {
   openModal() {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.data = this.premieresForecastSelected;
+    
+    console.log("this.premieresForecastSelected--> ", this.premieresForecastSelected);
     dialogConfig.width = '700px';
     dialogConfig.height = '560px';
     const dialogRef = this.dialog.open(ModalComponent, dialogConfig);
-
+    
+    console.log("dialogConfig.data: ",dialogConfig.data);
+    
     dialogRef.afterClosed().subscribe(params => {
+
+      console.log("dentro de afterClosed");
       const premiereToSave = {};
+
       const paramsFromModal = [...params];
       paramsFromModal.map(item => premiereToSave[item.Id] = item.value);
-
       // tslint:disable-next-line: no-string-literal
       premiereToSave['Cod_pelicula'] = this.premieresForecastSelected.id_movie;
 
@@ -107,7 +113,7 @@ export class HomeComponent implements OnInit {
   }
 
   /** 
-   * Get premieres
+   * Get premieres after selected weeks.
    */
 
   getPremiers() {
@@ -124,7 +130,9 @@ export class HomeComponent implements OnInit {
   getCities() {
 
     this.citiesService.getCities().subscribe((response: CitiesResponse) => {
+      console.log("response -->",response)
       this.cities = response.value; 
+      console.log("response.value -->",this.cities)
     }, error => { });
   }
 
@@ -132,6 +140,7 @@ export class HomeComponent implements OnInit {
    * Save premiere forecast
    */
   savePremiereForecast() {
+    console.log("save premiere forecast");
     const premiereSelected: PremiereSelected[] = [];
     
     this.premieresListSelected.map(
@@ -142,15 +151,25 @@ export class HomeComponent implements OnInit {
       if (this.showParamsSection) {
         this.getPremiereForecast();
       }
-    }, error => { });
+    }, error => {error });
   }
 
   /**
-   * Get premiere forecast
+   * Get premiere forecast for the parametrization 
    */
+
+
   getPremiereForecast() {
-    this.premiersService.getForecastPremiers(this.citySelected.id, this.week).subscribe((response: GetPremieresForecast) => {
-      this.premieresForecast = response.value;
+    console.log("Entra a get premieresForecast");
+    
+    this.premiersService.getForecastPremiers(this.citySelected.id, this.idWeek).subscribe((response: GetPremieresForecast) => {
+      
+      console.log("response 2-->", response);
+
+      this.premieresForecast = response.Value;
+      console.log("this.premieresForecast 2-->", this.premieresForecast);
+    }, error =>{
+      console.log("error Get Premier Forecast", error);
     });
   }
 

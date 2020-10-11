@@ -79,15 +79,16 @@ export interface PremiereSelected {
 }
 
 export interface GetPremieresForecast {
-    value: PremiereForecast[];
+    Value: PremiereForecast[];
 }
 
+
 export interface PremiereForecast {
-    cod_forecast: number;
+    id_forecast: number;
+    cod_forecast: string;
     id_movie: number;
     nom_pelicula: string;
-    forecast: number;
-    participacion: number;
+    asistencia: number;
 }
 
 export interface ParamsResponse {

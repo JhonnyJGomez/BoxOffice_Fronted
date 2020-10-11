@@ -76,6 +76,7 @@ export class MockData {
     GET_PREMIERE_FORECAST = {
         Value: [
             {
+                id: 722,
                 Cod_pelicula: 'HO00908',
                 Titulo: 'MALEFICENT: MISTRESS OF EVIL'
             },

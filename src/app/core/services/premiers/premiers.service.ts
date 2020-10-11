@@ -55,10 +55,16 @@ export class PremiersService implements OnInit {
    */
   getForecastPremiers(cityId: number, week: number): Observable<{}> {
     return this.http.get(
-      this.urlGetForecastPremiere
+      'api/peliculas_forecast/forecast?id_ciudad={cityId}&num_semana={week}'
         .replace('{cityId}', String(cityId))
         .replace('{week}', String(week)),
       this.httpOptions);
+      
+    /*  return this.http.get(
+      this.urlGetForecastPremiere
+        .replace('{cityId}', String(cityId))
+        .replace('{week}', String(week)),
+      this.httpOptions); */
   }
 
   /**
