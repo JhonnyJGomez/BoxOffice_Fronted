@@ -82,9 +82,12 @@ export class ModalComponent implements OnInit {
     this.premiere = data;
     this.paramsService.getParams().subscribe((response: ParamsResponse) => {
       this.params = response.Value;
+      console.log("response.Value  --> ",response.Value )
       this.params.map((param) => {
-        param.value = param.Type === 'text' ? '' : [];
-        if (param.Type === 'days') {
+        param.value = param.type === 'text' ? '' : [];
+        console.log("param.value  --> ", param.value )
+        console.log("param.type  --> ", param.type )
+        if (param.type === 'days') {
           param.days = [ ...this.days ];
         }
       });
@@ -94,6 +97,7 @@ export class ModalComponent implements OnInit {
   ngOnInit() {}
 
   OnChange(data: string[], index: string, paramIndex: number) {
+    console.log("onChange");
     if (!data.includes(String(index))) {
       data.push(String(index));
     } else {

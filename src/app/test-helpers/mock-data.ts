@@ -76,7 +76,6 @@ export class MockData {
     GET_PREMIERE_FORECAST = {
         Value: [
             {
-                id: 722,
                 Cod_pelicula: 'HO00908',
                 Titulo: 'MALEFICENT: MISTRESS OF EVIL'
             },
@@ -86,12 +85,13 @@ export class MockData {
             }
         ]
     };
+
     GET_PARAMS = {
         Value: [
             {
-                Id: '1',
-                Atributo: 'Temporada_Vacaciones',
-                Type: 'check'
+                id: '1',
+                cod_atributo: 'Temporada_Vacaciones',
+                type: 'check'
             },
            /* {
                 Id: '2',
@@ -114,19 +114,19 @@ export class MockData {
                 Type: 'text'
             },*/
             {
-                Id: '6',
-                Atributo: 'evento_tv',
-                Type: 'days'
+                id: '6',
+                cod_atributo: 'evento_tv',
+                type: 'days'
             },
             {
-                Id: '7',
-                Atributo: 'festivo',
-                Type: 'days'
+                id: '7',
+                cod_atributo: 'festivo',
+                type: 'days'
             },
             {
-                Id: '8',
-                Atributo: 'rank',
-                Type: 'text'
+                id: '8',
+                cod_atributo: 'rank',
+                type: 'text'
             },
         ]
     };

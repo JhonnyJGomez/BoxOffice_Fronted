@@ -5,20 +5,20 @@
 <mat-dialog-content>
   <mat-list role="list">
     <mat-list-item role="listitem" *ngFor="let param of params; let i = index">
-      <mat-selection-list *ngIf="param.Type === 'check'" [(ngModel)]="param.value">
+      <mat-selection-list *ngIf="param.type === 'check'" [(ngModel)]="param.value">
         <mat-list-option [value]="true">
-          {{ param.Atributo }}
+          {{ param.cod_parametro }}
         </mat-list-option>
       </mat-selection-list>
-      <section *ngIf="param.Type === 'text'" class="text-param">
-        {{ param.Atributo }}
+      <section *ngIf="param.type === 'text'" class="text-param">
+        {{ param.cod_parametro }}
         <mat-form-field class="max">
           <mat-label></mat-label>
           <input matInput [(ngModel)]="param.value">
         </mat-form-field>
       </section>
-      <section *ngIf="param.Type === 'days'" class="days-param">
-          {{ param.Atributo }}
+      <section *ngIf="param.type === 'days'" class="days-param">
+          {{ param.cod_parametro }}
           <section class="days-wrapper">
             <mat-checkbox (change)="OnChange(param.value, day.id, i)" class="checkbox-custom" *ngFor="let day of param.days">
               {{ day.label }}
