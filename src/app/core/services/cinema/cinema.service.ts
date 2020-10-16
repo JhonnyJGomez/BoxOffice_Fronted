@@ -23,6 +23,7 @@ export class CinemaService implements OnInit {
    * Get Cinemas
    */
   getCinemas(city: number): Observable<{}> {
-    return this.http.get(this.url.replace('{cityId}', String(city)));
+    return this.http.get('api/cines?cod_ciudad={cityId}'.replace('{cityId}', String(city)));
+    /* return this.http.get(this.url.replace('{cityId}', String(city))); */
   }
 }

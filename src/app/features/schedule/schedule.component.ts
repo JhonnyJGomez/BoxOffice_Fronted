@@ -87,7 +87,7 @@ export class ScheduleComponent implements OnInit {
    * Get cinemas
    */
   getCinemas() {
-    this.cinemaService.getCinemas(this.citySelected.id).subscribe((response: CinemaResponse) => {
+    this.cinemaService.getCinemas(this.citySelected.id).subscribe((response: CinemaResponse) => {      
       this.cinemas = response.value;
     }, error => { });
   }

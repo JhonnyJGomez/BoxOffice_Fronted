@@ -35,6 +35,7 @@ export class ParamsService implements OnInit {
    *
    */
   getParamsPrograms(): Observable<{}> {
-    return this.http.get(this.urlParamsProgram);
+    return this.http.get('/api/parametros/param_program');
+    /* return this.http.get(this.urlParamsProgram); */
   }
 }
