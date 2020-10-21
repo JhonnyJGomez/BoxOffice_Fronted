@@ -14,6 +14,7 @@ export class PremiersService implements OnInit {
   urlGetForecastPremiere: string;
   urlPostPremiereParameterized: string;
   urlPostGenerateForecast: string;
+  urlPostUpdateForecastAfterAzure: string;
   httpOptions = {};
   constructor(
     private http: HttpClient
@@ -22,32 +23,28 @@ export class PremiersService implements OnInit {
     this.urlPostAddForecastPremiere = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.POST_FORECAST_PREMIERE;
     this.urlGetForecastPremiere = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.GET_FORECAST_PREMIERS;
     this.urlPostPremiereParameterized = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.POST_PREMIERE_PARAMETERIZED;
-    // TODO: uncomment when the endpoint is working as expected
-    // this.urlPostGenerateForecast = APP_CONSTANTS.API.AZURE;
-    this.urlPostGenerateForecast = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.POST_GENERATE_FORECAST_V2;
+    this.urlPostGenerateForecast = APP_CONSTANTS.API.AZURE + APP_CONSTANTS.API.AZURE_POST_GENERATE_FORECAST;
+    this.urlPostUpdateForecastAfterAzure = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.AZURE_POST_UPDATE_FORECAST_AFTER_AZURE;
     this.httpOptions = {
       headers: new HttpHeaders(APP_CONSTANTS.HTTP_HEADERS)
     };
   }
 
-  ngOnInit() { 
+  ngOnInit() {
   }
 
   /**
    * Get premiers
    */
   getPremiers(idWeek: number): Observable<{}> {
-    return this.http.get('/api/peliculas_semanas?id_semana='+ String(idWeek));
-    
-    //return this.http.get(this.url.replace('{week}', String(week)));
+    return this.http.get(this.url.replace('{week}', String(idWeek)));
   }
 
   /**
    * post premiere forecast
    */
   postAddForecastPremier(premiereSelected: PremiereSelected[]): Observable<{}> {
-    return this.http.post('/api/peliculas_forecast/create', premiereSelected); 
-    //return this.http.post(this.urlPostAddForecastPremiere, premiereSelected);
+    return this.http.post(this.urlPostAddForecastPremiere, premiereSelected);
   }
 
   /**
@@ -55,41 +52,35 @@ export class PremiersService implements OnInit {
    */
   getForecastPremiers(cityId: number, week: number): Observable<{}> {
     return this.http.get(
-      'api/peliculas_forecast/forecast?id_ciudad={cityId}&num_semana={week}'
-        .replace('{cityId}', String(cityId))
-        .replace('{week}', String(week)),
-      this.httpOptions);
-      
-    /*  return this.http.get(
       this.urlGetForecastPremiere
         .replace('{cityId}', String(cityId))
         .replace('{week}', String(week)),
-      this.httpOptions); */
+      this.httpOptions);
   }
 
   /**
    * post premiere parameterized
    */
   postPremiereParameterized(data: {}, week: number, movieId: number): Observable<{}> {
-
-    console.log(data);
     return this.http.post(
-      'api/peliculas_parametrizar?num_semana={week}&id_pelicula={movieId}'
-        .replace('{week}', String(week))
-        .replace('{movieId}', String(movieId)),
-      data);
- /*    return this.http.post(
       this.urlPostPremiereParameterized
         .replace('{week}', String(week))
         .replace('{movieId}', String(movieId)),
-      data); */
+      data);
   }
 
   /**
    * post generate forecast
    */
   postGenerateForecast(data: {}): Observable<GeneratedForecast> {
-    return this.http.post<GeneratedForecast>('https://ussouthcentral.services.azureml.net/workspaces/67e04638658949d8a650452a02b98bdb/services/06c5630cea5f4c8582fc75ef66b228ab/execute?api-version=2.0&format=swagger', data, this.httpOptions);
-    /* return this.http.post<GeneratedForecast>(this.urlPostGenerateForecast, data, this.httpOptions); */
+    return this.http.post<GeneratedForecast>(this.urlPostGenerateForecast, data, this.httpOptions);
+  }
+
+  /**
+   * Update forecaste after azure response
+   */
+  updateForecastAfterAzureResponse(dataToUpdate: [{}], idForecast: number): Observable<GeneratedForecast> {
+    const url = this.urlPostUpdateForecastAfterAzure.replace('{cod_forecast}', String(idForecast));
+    return this.http.post<GeneratedForecast>(url, {data: dataToUpdate}, this.httpOptions);
   }
 }

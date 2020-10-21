@@ -79,8 +79,8 @@ export class GeneratedComponent implements OnInit {
   getScore() {
     this.scoreService.getScore(this.codeForecast).subscribe((response: ScoreResponse) => {
       this.dataSource = response.Results.output1;
-    }, () => {
-      console.log('error');
+    }, error => {
+      console.log('Error:', error);
     });
   }
 

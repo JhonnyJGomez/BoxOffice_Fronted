@@ -71,7 +71,9 @@ export class ScheduleComponent implements OnInit {
   getWeeks() {
     this.weeksService.getWeeks(this.date).subscribe((response: WeeksResponse) => {
       this.week = Number(response.num_semana);
-    }, error => { });
+    }, error => {
+      console.log('Error:', error);
+    });
   }
 
   /**
@@ -80,16 +82,20 @@ export class ScheduleComponent implements OnInit {
   getCities() {
     this.citiesService.getCities().subscribe((response: CitiesResponse) => {
       this.cities = response.value;
-    }, error => { });
+    }, error => {
+      console.log('Error:', error);
+    });
   }
 
   /**
    * Get cinemas
    */
   getCinemas() {
-    this.cinemaService.getCinemas(this.citySelected.id).subscribe((response: CinemaResponse) => {      
+    this.cinemaService.getCinemas(this.citySelected.id).subscribe((response: CinemaResponse) => {
       this.cinemas = response.value;
-    }, error => { });
+    }, error => {
+      console.log('Error:', error);
+    });
   }
 
   /**
@@ -135,7 +141,9 @@ export class ScheduleComponent implements OnInit {
   saveParamsProgram() {
     this.scheduleService.saveParamsProgram(this.paramProgramToSave).subscribe(response => {
       this.showGenerateButton = true;
-    }, error => {});
+    }, error => {
+      console.log('Error:', error);
+    });
   }
 
   /**
@@ -149,6 +157,8 @@ export class ScheduleComponent implements OnInit {
       } else {
         console.log('Un error ha ocurrido generando la programación');
       }
-    }, error => {});
+    }, error => {
+      console.log('Error:', error);
+    });
   }
 }

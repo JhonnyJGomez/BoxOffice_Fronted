@@ -25,27 +25,28 @@ export interface PremiersResponse {
     value: Premiere[];
 }
 
-/* export interface Premiere {
-    Cod_pelicula: string;
-    title: string;
+export interface Premiere {
+    cod_pelicula: string;
+    id: number;
+    id_distributor: number;
+    id_genero: number;
+    id_rating: number;
+    titulo: string;
+}
+
+
+export interface PremiereResponse {
+    value: PremiereResponseForecast[];
+}
+
+export interface PremiereResponseForecast {
+    Rank: string;
+    Title: string;
     Rating: string;
     Dist: string;
     Genre: string;
-    checked: boolean;
     ReleaseDate?: string;
-    params?: any;
-} */
-
-export interface Premiere {
-    id_pelicula: number;
-    cod_pelicula: string;
-    titulo: string;
-    id_rating: string;
-    id_distributor: string;
-    id_genero: string;
-    checked: boolean;
-    ReleaseDate?: string;
-    params?: any;
+    value: number;
 }
 
 export interface CitiesResponse {
@@ -91,17 +92,18 @@ export interface PremiereForecast {
     asistencia: number;
 }
 
+
 export interface ParamsResponse {
     Value: Param[];
 }
 
-/* export interface Param {
+export interface Param {
     Id: string;
     Atributo: string;
     Type: string;
     value: string | string[];
     days?: Day[];
-} */
+}
 
 export interface Param {
     id: string;
@@ -118,9 +120,8 @@ export interface Day {
     checked: boolean;
 }
 
-export interface PremiereToGenerateForecast  {
-    Inputs: Premiere[];
-    GlobalParameters: {};
+export interface PremiereToGenerateForecast {
+    Inputs: PremiereForecast[];
 }
 
 export interface ParamsProgramResponse {
@@ -183,9 +184,10 @@ export interface Schedule {
 }
 
 export interface GeneratedForecast {
-    cod_forecast: number;
+    Results: {
+        output1: [{}];
+    };
 }
-
 
 export interface GeneratedSchedule {
     cod_forecast: number;

@@ -18,9 +18,7 @@ export class ModalProgramsComponent implements OnInit {
     private paramsService: ParamsService
   ) {
     this.paramsService.getParamsPrograms().subscribe((response: ParamsProgramResponse) => {
-      console.log(" response.value",  response.value);
       this.params = response.value;
-      console.log(" this.params ",  this.params);
     }, error => {});
   }
 

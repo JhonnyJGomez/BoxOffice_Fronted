@@ -1,5 +1,4 @@
-
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 
@@ -12,10 +11,10 @@ import {
   CitiesResponse,
   City,
   GetPremieresForecast,
+  PremiereResponse,
   Premiere,
   PremiereForecast,
   PremiereSelected,
-  PremiereToGenerateForecast,
   PremiersResponse,
   SuccessReponse,
   WeeksResponse
@@ -37,9 +36,10 @@ export class HomeComponent implements OnInit {
   premieresForecast: PremiereForecast[] = [];
   premieresForecastSelected: PremiereForecast;
   premiereToAddParams: Premiere;
-  premiereToGenerateForecast: PremiereToGenerateForecast = {
-    Inputs: [],
-    GlobalParameters: {}
+  premiereToGenerateForecast = {
+    Inputs: {
+      input1: []
+    }
   };
   citySelected: City;
 
@@ -53,43 +53,43 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() { }
 
-  getItems() {
-    return this.premieres.filter(premier => premier.checked);
-  }
-
   /**
    * Open modal
    */
   openModal() {
     const dialogConfig = new MatDialogConfig();
+    console.log(this.premieresForecastSelected);
     dialogConfig.data = this.premieresForecastSelected;
-    
-    console.log("this.premieresForecastSelected--> ", this.premieresForecastSelected);
     dialogConfig.width = '700px';
     dialogConfig.height = '560px';
     const dialogRef = this.dialog.open(ModalComponent, dialogConfig);
-    
-    console.log("dialogConfig.data: ",dialogConfig.data);
-    
+
     dialogRef.afterClosed().subscribe(params => {
-
-      console.log("dentro de afterClosed");
-      const premiereToSave = {};
-
+      const premiereToSave = [];
       const paramsFromModal = [...params];
-      paramsFromModal.map(item => premiereToSave[item.Id] = item.value);
-      // tslint:disable-next-line: no-string-literal
-      premiereToSave['Cod_pelicula'] = this.premieresForecastSelected.id_movie;
 
-      this.premiersService.postPremiereParameterized(
-        { Value: premiereToSave },
-        this.week,
-        this.premieresForecastSelected.id_movie
-      ).subscribe((response: Premiere) => {
-        const res = { ...response };
-        delete res.params;
-        this.premiereToGenerateForecast.Inputs.push(res);
-      }, error => { });
+      if (paramsFromModal.length > 0) {
+        paramsFromModal.forEach(param => {
+          premiereToSave.push({
+            id_pelicula: this.premieresForecastSelected.id_movie,
+            id_parametro: param.id,
+            value: param.value instanceof Array ? param.value.join() : param.value
+          });
+        });
+
+        this.premiersService.postPremiereParameterized(
+          { Value: premiereToSave },
+          this.week,
+          this.premieresForecastSelected.id_movie
+        ).subscribe((response: PremiereResponse) => {
+          const res = { ...response.value };
+          delete res[0].value;
+          res[0].ReleaseDate = this.date;
+          this.premiereToGenerateForecast.Inputs.input1.push(res[0]);
+        }, error => {
+          console.log('Error:', error);
+        });
+      }
     });
   }
 
@@ -100,8 +100,9 @@ export class HomeComponent implements OnInit {
     this.weeksService.getWeeks(this.date).subscribe((response: WeeksResponse) => {
       this.week = Number(response.num_semana);
       this.idWeek = response.id;
-
-    }, error => { });
+    }, error => {
+      console.log('Error:', error);
+    });
   }
 
   /**
@@ -112,64 +113,56 @@ export class HomeComponent implements OnInit {
     this.getCities();
   }
 
-  /** 
+  /**
    * Get premieres after selected weeks.
    */
-
   getPremiers() {
-    
     this.premiersService.getPremiers(this.idWeek).subscribe((response: PremiersResponse) => {
       this.premieres = response.value;
-      this.premieres.map(premiere => premiere.checked = false);
-    }, error => { });
+    }, error => {
+      console.log('Error:', error);
+    });
   }
-   
+
   /**
    * Get cities
    */
   getCities() {
-
     this.citiesService.getCities().subscribe((response: CitiesResponse) => {
-      console.log("response -->",response)
-      this.cities = response.value; 
-      console.log("response.value -->",this.cities)
-    }, error => { });
+      this.cities = response.value;
+    }, error => {
+      console.log('Error:', error);
+    });
   }
 
   /**
    * Save premiere forecast
    */
   savePremiereForecast() {
-    console.log("save premiere forecast");
     const premiereSelected: PremiereSelected[] = [];
-    
+
     this.premieresListSelected.map(
-      premiere => premiereSelected.push({ id_semana: String(this.idWeek), id_pelicula: premiere, id_ciudad: Number(this.citySelected.id)})
+      premiere => premiereSelected.push({ id_semana: String(this.idWeek), id_pelicula: premiere, id_ciudad: Number(this.citySelected.id) })
     );
+
     this.premiersService.postAddForecastPremier(premiereSelected).subscribe((response: SuccessReponse) => {
       this.showParamsSection = response.Result === 'OK';
       if (this.showParamsSection) {
         this.getPremiereForecast();
       }
-    }, error => {error });
+    }, error => {
+      console.log('Error:', error);
+    });
   }
 
   /**
-   * Get premiere forecast for the parametrization 
+   * Get premiere forecast for the parametrization
    */
-
-
   getPremiereForecast() {
-    console.log("Entra a get premieresForecast");
-    
     this.premiersService.getForecastPremiers(this.citySelected.id, this.idWeek).subscribe((response: GetPremieresForecast) => {
-      
-      console.log("response 2-->", response);
-
       this.premieresForecast = response.Value;
-      console.log("this.premieresForecast 2-->", this.premieresForecast);
-    }, error =>{
-      console.log("error Get Premier Forecast", error);
+    }, error => {
+      console.log('Error:', error);
     });
   }
 
@@ -178,7 +171,17 @@ export class HomeComponent implements OnInit {
    */
   generateForecast() {
     this.premiersService.postGenerateForecast(this.premiereToGenerateForecast).subscribe(response => {
-      this.router.navigateByUrl('/generated/' + response.cod_forecast);
-    }, error => { });
+      this.updateForecastAfterAzureResponse(response.Results.output1);
+    }, error => {
+      console.log('Error:', error);
+    });
+  }
+
+  updateForecastAfterAzureResponse(data: [{}]) {
+    this.premiersService.updateForecastAfterAzureResponse(data, this.premieresForecastSelected.id_forecast).subscribe(response => {
+      this.router.navigateByUrl('/generated/' + this.premieresForecastSelected.id_forecast);
+    }, error => {
+      console.log('Error:', error);
+    });
   }
 }

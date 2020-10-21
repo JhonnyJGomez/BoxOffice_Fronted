@@ -24,9 +24,6 @@ export class WeeksService implements OnInit {
    *
    */
   getWeeks(date: string): Observable<{}> {
-    console.log(this.url);
-    return this.http.get('/api/semanas?fecha_inicial="' + date + '"');
-    // he tenido que enviarlo asi directo porque me jala el error de CORS, como si no tomara el proxy.conf.js   
-    //return this.http.get(this.url.replace('{date}', date));
+    return this.http.get(this.url.replace('{date}', date));
   }
 }
