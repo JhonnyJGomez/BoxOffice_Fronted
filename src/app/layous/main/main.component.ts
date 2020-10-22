@@ -33,8 +33,7 @@ export class MainComponent implements OnInit {
           route: '/define'
         },
         {
-          label: 'Generar Forecast',
-          route: '/generated'
+          label: 'Generar Forecast'
         }
       ]
     },
