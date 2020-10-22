@@ -15,7 +15,7 @@ export const APP_CONSTANTS = {
         POST_GENERATE_FORECAST: '/forecast/generate_forecast',
         GET_CINEMAS: '/cines?cod_ciudad={cityId}',
         GET_PARAMS_PROGRAM: '/parametros/param_program',
-        POST_SAVE_PARAM_PROGRAM: '/registra_param_program',
+        POST_SAVE_PARAM_PROGRAM: '/parametros/save_param_program',
         GENERATE_SCHEDULE: '/generar_programacion',
         GET_SCHEDULE: '/generar_programacion?forecast={forecast}',
         GET_FORECAST_REPORT: '/peliculas_forecast/forecast_report/{codeForecast}',

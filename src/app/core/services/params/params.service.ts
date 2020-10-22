@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { APP_CONSTANTS } from '@app/app.constants';
+import { ParamsProgramResponse } from '@interfaces/paramsPrograms';
 import { ParamsResponse } from '@interfaces/params';
 
 @Injectable({
@@ -33,7 +34,7 @@ export class ParamsService implements OnInit {
    * Get params
    *
    */
-  getParamsPrograms(): Observable<{}> {
-    return this.http.get(this.urlParamsProgram);
+  getParamsPrograms(): Observable<ParamsProgramResponse> {
+    return this.http.get<ParamsProgramResponse>(this.urlParamsProgram);
   }
 }

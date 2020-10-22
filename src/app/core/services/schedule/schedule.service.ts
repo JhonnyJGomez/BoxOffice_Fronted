@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { APP_CONSTANTS } from '@app/app.constants';
-import { GeneratedSchedule, Schedule } from '@interfaces/schedule';
-import { ParamProgramToSave, SaveForecastData } from '@interfaces/response';
+import { CreatedProgramReponse, ParamProgramToSave } from '@interfaces/paramsPrograms';
+import { GeneratedSchedule, Schedule, GenerateScheduleData } from '@interfaces/schedule';
 
 @Injectable({
   providedIn: 'root'
@@ -28,15 +28,19 @@ export class ScheduleService implements OnInit {
   /**
    * Save params program
    */
-  saveParamsProgram(data: ParamProgramToSave): Observable<{}> {
-    return this.http.post(this.urlSaveParams, data);
+  saveParamsProgram(data: ParamProgramToSave): Observable<CreatedProgramReponse> {
+    return this.http.post<CreatedProgramReponse>(this.urlSaveParams, data);
   }
 
   /**
    * Generate schedule
    */
-  generateSchedule(saveForecastData: SaveForecastData): Observable<GeneratedSchedule> {
-    return this.http.post<GeneratedSchedule>(this.urlGenerateSchedule, saveForecastData);
+  generateSchedule(week: number, cinemaId: string, premieresForecastIds: number[]): Observable<GeneratedSchedule> {
+    return this.http.post<GeneratedSchedule>(this.urlGenerateSchedule, {
+      week,
+      cinemaId: Number(cinemaId),
+      premieres_forecast_ids: premieresForecastIds
+    });
   }
 
   /**

@@ -8,16 +8,12 @@ import { ModalProgramsComponent } from '@components/modal-programs/modal-program
 import { PremiersService } from '@services/premiers/premiers.service';
 import { ScheduleService } from '@services/schedule/schedule.service';
 import { WeeksService } from '@services/weeks/weeks.service';
-import {
-  ParamProgram,
-  ParamProgramToSave,
-  SaveForecastData
-} from '@interfaces/response';
-import { WeeksResponse } from '@interfaces/weeks';
 import { isArray } from 'util';
-import { CitiesResponse, City } from '@interfaces/cities';
-import { GetPremieresForecastResponse, PremiereForecast } from '@interfaces/premiersForecast';
+import { City } from '@interfaces/cities';
+import { PremiereForecast } from '@interfaces/premiersForecast';
 import { Cinema } from '@interfaces/cinema';
+import { ParamProgramItem, ParamProgramToSave } from '@interfaces/paramsPrograms';
+import { GenerateScheduleData } from '@interfaces/schedule';
 
 @Component({
   selector: 'app-schedule',
@@ -30,23 +26,16 @@ export class ScheduleComponent implements OnInit {
   ticket: string;
   cities: City[];
   citySelected: City;
-  cinemaSelected: Cinema = {
-    cod_ciudad: null,
-    id: '',
-    nom_cine: '',
-    ticket_promedio: null
-  };
+  cinemaSelected: Cinema;
   cinemas: Cinema[];
-  displayedColumns: string[] = ['movies', 'prediction', 'participation'];
+  displayedColumns: string[] = ['movies', 'prediction']; // TODO: agregar 'participation' si es nececario y descomentar el HTML
   premieresForecast: PremiereForecast[];
-  paramsValues: ParamProgram[];
+  paramsValues: ParamProgramItem[];
   paramProgramToSave: ParamProgramToSave = {
     value: []
   };
   showGenerateButton = false;
-  saveForecastData: SaveForecastData = {
-    forecast: null
-  };
+  saveForecastData: GenerateScheduleData;
 
   constructor(
     private cinemaService: CinemaService,
@@ -113,17 +102,17 @@ export class ScheduleComponent implements OnInit {
     dialogConfig.height = '560px';
     const dialogRef = this.dialog.open(ModalProgramsComponent, dialogConfig);
 
-    dialogRef.afterClosed().subscribe((params: ParamProgram[]) => {
+    dialogRef.afterClosed().subscribe((params: ParamProgramItem[]) => {
       params.map(item => {
         if (isArray(item.value)) {
-          item.value = !!item.value[0];
+          item.value = item.value[0] ? true : '';
         } else {
-          item.value = String(item.value);
+          item.value = String(item.value || '');
         }
 
         this.paramProgramToSave.value.push({
-          id_forecast: this.premieresForecast[0].id_forecast,
-          id_parametro: Number(item.Id),
+          cod_forecast: this.premieresForecast[0].cod_forecast,
+          id_parametro: Number(item.id),
           value: item.value
         });
       });
@@ -147,10 +136,11 @@ export class ScheduleComponent implements OnInit {
    * Generate schedule
    */
   generateSchedule() {
-    this.saveForecastData.forecast = this.premieresForecast[0].id_forecast;
-    this.scheduleService.generateSchedule(this.saveForecastData).subscribe(response => {
+    const cod_forecast = this.premieresForecast[0].cod_forecast;
+    const premieresForecastIds = this.premieresForecast.map(premiereForecast => premiereForecast.id_movie);
+    this.scheduleService.generateSchedule(this.week, this.cinemaSelected.id, premieresForecastIds).subscribe(response => {
       if (response.status === 'Generated') {
-        this.router.navigateByUrl('/view-schedule/' + response.cod_forecast);
+        this.router.navigateByUrl('/view-schedule/' + cod_forecast);
       } else {
         console.log('Un error ha ocurrido generando la programación');
       }

@@ -47,7 +47,7 @@
         <mat-grid-tile>
           <mat-form-field>
             <mat-label>{{ "global.cinema" | translate }}</mat-label>
-            <mat-select [(ngModel)]="cinemaSelected">
+            <mat-select [(ngModel)]="cinemaSelected" [disabled]="!citySelected || date === ''">
               <mat-option
                 name="premiereToAddParams"
                 ngDefaultControl
@@ -59,10 +59,11 @@
             </mat-select>
           </mat-form-field>
         </mat-grid-tile>
-        <mat-grid-tile>
+        <mat-grid-tile *ngIf="cinemaSelected">
           <mat-form-field>
             <input
               matInput
+              *ngIf="cinemaSelected"
               placeholder="{{ 'global.average-ticket' | translate }}"
               type="number"
               [(ngModel)]="cinemaSelected.ticket_promedio"
@@ -71,8 +72,8 @@
         </mat-grid-tile>
       </mat-grid-list>
       <mat-grid-list cols="3" rowHeight="40" class="center">
-        <button mat-raised-button color="warn" (click)="getPremiereForecast()">
-          {{ "global.apply" | translate }}
+        <button mat-raised-button color="warn" (click)="getPremiereForecast()" [disabled]="!citySelected || date === '' || !cinemaSelected">
+          {{ "global.get-forecast" | translate }}
         </button>
       </mat-grid-list>
     </mat-card>
@@ -95,14 +96,14 @@
             <td mat-cell *matCellDef="let element">{{ element.asistencia }}</td>
           </ng-container>
           <!--  Creo que por ahora no es necesario cargar la participacion.-->
-          <ng-container matColumnDef="participation">
+          <!--<ng-container matColumnDef="participation">
             <th mat-header-cell *matHeaderCellDef>
               {{ "schedule.table.participation" | translate }}
             </th>
             <td mat-cell *matCellDef="let element">
               {{ element.participacion }}
             </td>
-          </ng-container>
+          </ng-container>-->
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
         </table>

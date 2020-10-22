@@ -1,10 +1,8 @@
-import { Component, OnInit, Inject} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { MAT_DIALOG_DATA } from '@angular/material';
 
 import { ParamsService } from '@services/params/params.service';
-import { ParamProgram, ParamsProgramResponse } from '@interfaces/response';
-import { PremiereForecast } from '@interfaces/premiersForecast';
+import { ParamProgramItem } from '@interfaces/paramsPrograms';
 
 @Component({
   selector: 'app-modal-programs',
@@ -12,15 +10,16 @@ import { PremiereForecast } from '@interfaces/premiersForecast';
   styleUrls: ['./modal-programs.component.scss']
 })
 export class ModalProgramsComponent implements OnInit {
-  params: ParamProgram[] = [];
+  params: ParamProgramItem[] = [];
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: PremiereForecast,
     private translate: TranslateService,
     private paramsService: ParamsService
   ) {
-    this.paramsService.getParamsPrograms().subscribe((response: ParamsProgramResponse) => {
+    this.paramsService.getParamsPrograms().subscribe(response => {
       this.params = response.value;
-    }, error => {});
+    }, error => {
+      console.log('Error:', error);
+    });
   }
 
   ngOnInit() {}
