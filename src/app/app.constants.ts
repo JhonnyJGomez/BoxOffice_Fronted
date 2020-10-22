@@ -18,7 +18,7 @@ export const APP_CONSTANTS = {
         POST_SAVE_PARAM_PROGRAM: '/registra_param_program',
         GENERATE_SCHEDULE: '/generar_programacion',
         GET_SCHEDULE: '/generar_programacion?forecast={forecast}',
-        GET_FORECAST_V2: '/generar_forecast_v2?cod_forecast={codeForecast}',
+        GET_FORECAST_REPORT: '/peliculas_forecast/forecast_report/{codeForecast}',
         AZURE_POST_UPDATE_FORECAST_AFTER_AZURE: '/peliculas_forecast/update_forecast/{cod_forecast}'
     },
     HTTP_HEADERS: {

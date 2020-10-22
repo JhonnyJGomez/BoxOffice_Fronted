@@ -30,7 +30,7 @@ export class ScoreService implements OnInit {
   constructor(
     private http: HttpClient
   ) {
-    this.generateURL = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.GET_FORECAST_V2;
+    this.generateURL = APP_CONSTANTS.API.BASE + APP_CONSTANTS.API.GET_FORECAST_REPORT;
   }
 
   ngOnInit() {
