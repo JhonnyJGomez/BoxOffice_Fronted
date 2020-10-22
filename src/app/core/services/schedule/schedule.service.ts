@@ -1,9 +1,10 @@
-import { Injectable, OnInit, Inject } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { APP_CONSTANTS } from '@app/app.constants';
-import { ParamProgramToSave, SaveForecastData, GeneratedSchedule } from '@interfaces/response';
+import { GeneratedSchedule, Schedule } from '@interfaces/schedule';
+import { ParamProgramToSave, SaveForecastData } from '@interfaces/response';
 
 @Injectable({
   providedIn: 'root'
@@ -41,7 +42,7 @@ export class ScheduleService implements OnInit {
   /**
    * Get schedule
    */
-  getSchedule(forecast: number): Observable<{}> {
-    return this.http.get(this.urlGetSchedule.replace('{forecast}', String(forecast)));
+  getSchedule(forecast: number): Observable<Schedule> {
+    return this.http.get<Schedule>(this.urlGetSchedule.replace('{forecast}', String(forecast)));
   }
 }

@@ -1,8 +1,9 @@
-import { Injectable, OnInit, Inject } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { APP_CONSTANTS } from '@app/app.constants';
+import { WeeksResponse } from '@interfaces/weeks';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +24,7 @@ export class WeeksService implements OnInit {
    * Get week
    *
    */
-  getWeeks(date: string): Observable<{}> {
-    return this.http.get(this.url.replace('{date}', date));
+  getWeeks(date: string): Observable<WeeksResponse> {
+    return this.http.get<WeeksResponse>(this.url.replace('{date}', date));
   }
 }

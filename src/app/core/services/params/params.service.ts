@@ -1,8 +1,9 @@
-import { Injectable, OnInit, Inject } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { APP_CONSTANTS } from '@app/app.constants';
+import { ParamsResponse } from '@interfaces/params';
 
 @Injectable({
   providedIn: 'root'
@@ -24,8 +25,8 @@ export class ParamsService implements OnInit {
   /**
    * Get params
    */
-  getParams(): Observable<{}> {
-    return this.http.get(this.url);
+  getParams(): Observable<ParamsResponse> {
+    return this.http.get<ParamsResponse>(this.url);
   }
 
   /**

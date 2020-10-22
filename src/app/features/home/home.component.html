@@ -25,8 +25,13 @@
           </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile>
-          <button mat-raised-button color="warn" (click)="loadData()">
-            {{ "global.apply" | translate }}
+          <button
+            [disabled]="!citySelected && !idWeek ? true : false"
+            mat-raised-button
+            color="warn"
+            (click)="loadData()"
+          >
+            {{ "global.get-premieres" | translate }}
           </button>
         </mat-grid-tile>
       </mat-grid-list>
@@ -39,11 +44,10 @@
             <section>
               <mat-selection-list [(ngModel)]="premieresListSelected">
                 <mat-list-option
-                  [selected]="premiere.checked"
                   [value]="premiere.id"
                   *ngFor="let premiere of premieres"
                 >
-                  {{ premiere.id }} {{ premiere.titulo }} 
+                  {{ premiere.id }} {{ premiere.titulo }}
                 </mat-list-option>
               </mat-selection-list>
             </section>
@@ -53,9 +57,10 @@
           <button
             mat-raised-button
             color="warn"
-            (click)="savePremiereForecast()"
+            [disabled]="!citySelected ? true : false"
+            (click)="createPremiereForecast()"
           >
-            Aplicar
+            {{ "global.create-forecast" | translate }}
           </button>
         </mat-grid-tile>
       </mat-grid-list>
@@ -71,17 +76,19 @@
           </mat-form-field>
         </mat-grid-tile>
       </mat-grid-list>
-    </mat-card> 
+    </mat-card>
     <mat-card *ngIf="showParamsSection">
       <mat-grid-list cols="2" rowHeight="100">
         <mat-grid-tile>
           <mat-form-field class="select-parameters">
             <mat-label>Seleccione estreno a parametrizar</mat-label>
-            <mat-select [(ngModel)]="premieresForecastSelected">
+            <mat-select [(ngModel)]="premiereForecastSelectedToSetParamas">
               <mat-option
                 name="premiereToAddParams"
                 ngDefaultControl
-                *ngFor="let premier of premieresForecast"
+                *ngFor="
+                  let premier of listOfPremieresForecastToNeedParametrized
+                "
                 [value]="premier"
               >
                 {{ premier.nom_pelicula }}
@@ -103,10 +110,16 @@
       <mat-grid-list cols="1" rowHeight="100">
         <mat-grid-tile>
           <button
+            [disabled]="
+              bodyToGetScoredLabelFromAzureServer.Inputs.input1.length !==
+              listOfPremieresForecastToNeedParametrized.length
+                ? true
+                : false
+            "
             mat-raised-button
             color="warn"
             class="item-full"
-            (click)="generateForecast()"
+            (click)="getScoredLabelFromAzureServer()"
           >
             Generar forecast
           </button>

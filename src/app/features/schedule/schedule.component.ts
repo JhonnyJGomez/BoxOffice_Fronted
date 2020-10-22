@@ -9,18 +9,15 @@ import { PremiersService } from '@services/premiers/premiers.service';
 import { ScheduleService } from '@services/schedule/schedule.service';
 import { WeeksService } from '@services/weeks/weeks.service';
 import {
-  Cinema,
-  CinemaResponse,
-  CitiesResponse,
-  City,
-  GetPremieresForecast,
   ParamProgram,
   ParamProgramToSave,
-  PremiereForecast,
-  SaveForecastData,
-  WeeksResponse
+  SaveForecastData
 } from '@interfaces/response';
+import { WeeksResponse } from '@interfaces/weeks';
 import { isArray } from 'util';
+import { CitiesResponse, City } from '@interfaces/cities';
+import { GetPremieresForecastResponse, PremiereForecast } from '@interfaces/premiersForecast';
+import { Cinema } from '@interfaces/cinema';
 
 @Component({
   selector: 'app-schedule',
@@ -69,7 +66,7 @@ export class ScheduleComponent implements OnInit {
    * Get weeks
    */
   getWeeks() {
-    this.weeksService.getWeeks(this.date).subscribe((response: WeeksResponse) => {
+    this.weeksService.getWeeks(this.date).subscribe(response => {
       this.week = Number(response.num_semana);
     }, error => {
       console.log('Error:', error);
@@ -80,7 +77,7 @@ export class ScheduleComponent implements OnInit {
    * Get cities
    */
   getCities() {
-    this.citiesService.getCities().subscribe((response: CitiesResponse) => {
+    this.citiesService.getCities().subscribe(response => {
       this.cities = response.value;
     }, error => {
       console.log('Error:', error);
@@ -91,7 +88,7 @@ export class ScheduleComponent implements OnInit {
    * Get cinemas
    */
   getCinemas() {
-    this.cinemaService.getCinemas(this.citySelected.id).subscribe((response: CinemaResponse) => {
+    this.cinemaService.getCinemas(this.citySelected.id).subscribe(response => {
       this.cinemas = response.value;
     }, error => {
       console.log('Error:', error);
@@ -102,7 +99,7 @@ export class ScheduleComponent implements OnInit {
    * Get premiere forecast
    */
   getPremiereForecast() {
-    this.premiersService.getForecastPremiers(this.citySelected.id, this.week).subscribe((response: GetPremieresForecast) => {
+    this.premiersService.getForecastPremiers(this.citySelected.id, this.week).subscribe(response => {
       this.premieresForecast = response.Value;
     });
   }

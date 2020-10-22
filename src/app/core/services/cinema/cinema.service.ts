@@ -1,8 +1,9 @@
-import { Injectable, OnInit, Inject } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { APP_CONSTANTS } from '@app/app.constants';
+import { CinemaResponse } from '@interfaces/cinema';
 
 @Injectable({
   providedIn: 'root'
@@ -22,8 +23,7 @@ export class CinemaService implements OnInit {
   /**
    * Get Cinemas
    */
-  getCinemas(city: number): Observable<{}> {
-    return this.http.get('api/cines?cod_ciudad={cityId}'.replace('{cityId}', String(city)));
-    /* return this.http.get(this.url.replace('{cityId}', String(city))); */
+  getCinemas(city: number): Observable<CinemaResponse> {
+    return this.http.get<CinemaResponse>(this.url.replace('{cityId}', String(city)));
   }
 }

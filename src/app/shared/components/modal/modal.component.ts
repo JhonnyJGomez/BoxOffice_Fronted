@@ -1,8 +1,10 @@
 import { Component, OnInit, Inject} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { MAT_DIALOG_DATA } from '@angular/material';
+
 import { ParamsService } from '@services/params/params.service';
-import { Param, ParamsResponse, Day, PremiereForecast } from '@interfaces/response';
+import { PremiereForecast } from '@interfaces/premiersForecast';
+import { Day, Param } from '@interfaces/params';
 
 @Component({
   selector: 'app-modal',
@@ -18,17 +20,6 @@ export class ModalComponent implements OnInit {
       name: 'Temporada de vacaciones',
       checked: false
     }
-   /*  ,
-    {
-      id: 1,
-      name: 'Inicia sábado después de las 10:00 pm?',
-      checked: false
-    },
-    {
-      id: 2,
-      name: 'Inicia domingo antes de las 6:00 pm?',
-      checked: true
-    } */
   ];
   days: Day[] = [
     {
@@ -80,7 +71,7 @@ export class ModalComponent implements OnInit {
     private paramsService: ParamsService
   ) {
     this.premiere = data;
-    this.paramsService.getParams().subscribe((response: ParamsResponse) => {
+    this.paramsService.getParams().subscribe(response => {
       this.params = response.Value;
       this.params.map((param) => {
         param.value = param.type === 'text' ? '' : [];

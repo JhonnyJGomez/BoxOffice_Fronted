@@ -3,7 +3,8 @@ import { TranslateService } from '@ngx-translate/core';
 import { MAT_DIALOG_DATA } from '@angular/material';
 
 import { ParamsService } from '@services/params/params.service';
-import { ParamProgram, ParamsProgramResponse, PremiereForecast } from '@interfaces/response';
+import { ParamProgram, ParamsProgramResponse } from '@interfaces/response';
+import { PremiereForecast } from '@interfaces/premiersForecast';
 
 @Component({
   selector: 'app-modal-programs',

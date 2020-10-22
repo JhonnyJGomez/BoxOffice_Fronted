@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { APP_CONSTANTS } from '@app/app.constants';
+import { ScoredLabelGeneratedByAzureServer } from '@interfaces/azure';
 
 @Injectable({
   providedIn: 'root'
@@ -39,7 +40,7 @@ export class ScoreService implements OnInit {
    * Get the score
    *
    */
-  getScore(codeForecast: number): Observable<{}> {
-    return this.http.get(this.generateURL.replace('{codeForecast}', String(codeForecast)));
+  getScore(codeForecast: number): Observable<ScoredLabelGeneratedByAzureServer> {
+    return this.http.get<ScoredLabelGeneratedByAzureServer>(this.generateURL.replace('{codeForecast}', String(codeForecast)));
   }
 }

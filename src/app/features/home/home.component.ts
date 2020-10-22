@@ -2,23 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 
+import { AzureBody, SecoreLabedGeneratedItem } from '@interfaces/azure';
 import { CitiesService } from '@services/cities/cities.service';
+import { City } from '@interfaces/cities';
 import { ModalComponent } from '@components/modal/modal.component';
+import { Premiere } from '@interfaces/premiers';
+import { PremiereForecast } from '@interfaces/premiersForecast';
+import { PremiereSelected } from '@interfaces/response';
 import { PremiersService } from '@services/premiers/premiers.service';
 import { WeeksService } from '@services/weeks/weeks.service';
-
-import {
-  CitiesResponse,
-  City,
-  GetPremieresForecast,
-  PremiereResponse,
-  Premiere,
-  PremiereForecast,
-  PremiereSelected,
-  PremiersResponse,
-  SuccessReponse,
-  WeeksResponse
-} from '@interfaces/response';
 
 @Component({
   selector: 'app-home',
@@ -33,10 +25,9 @@ export class HomeComponent implements OnInit {
   cities: City[] = [];
   premieresListSelected: string[];
   showParamsSection = false;
-  premieresForecast: PremiereForecast[] = [];
-  premieresForecastSelected: PremiereForecast;
-  premiereToAddParams: Premiere;
-  premiereToGenerateForecast = {
+  listOfPremieresForecastToNeedParametrized: PremiereForecast[] = [];
+  premiereForecastSelectedToSetParamas: PremiereForecast;
+  bodyToGetScoredLabelFromAzureServer: AzureBody = {
     Inputs: {
       input1: []
     }
@@ -51,41 +42,57 @@ export class HomeComponent implements OnInit {
     public dialog: MatDialog
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {}
+
+  /**
+   * Load premieres and cities data
+   */
+  loadData() {
+    this.getPremiers();
+    this.getCities();
+  }
 
   /**
    * Open modal
    */
   openModal() {
     const dialogConfig = new MatDialogConfig();
-    console.log(this.premieresForecastSelected);
-    dialogConfig.data = this.premieresForecastSelected;
+    dialogConfig.data = this.premiereForecastSelectedToSetParamas;
     dialogConfig.width = '700px';
     dialogConfig.height = '560px';
     const dialogRef = this.dialog.open(ModalComponent, dialogConfig);
 
     dialogRef.afterClosed().subscribe(params => {
-      const premiereToSave = [];
-      const paramsFromModal = [...params];
+      const paramsOfPremierToSaveToForecast = [];
+      const paramsUpdatedFromModal = [ ...params ];
 
-      if (paramsFromModal.length > 0) {
-        paramsFromModal.forEach(param => {
-          premiereToSave.push({
-            id_pelicula: this.premieresForecastSelected.id_movie,
+      if (paramsUpdatedFromModal.length > 0) {
+        paramsUpdatedFromModal.forEach(param => {
+          paramsOfPremierToSaveToForecast.push({
+            id_pelicula: this.premiereForecastSelectedToSetParamas.id_movie,
             id_parametro: param.id,
             value: param.value instanceof Array ? param.value.join() : param.value
           });
         });
 
         this.premiersService.postPremiereParameterized(
-          { Value: premiereToSave },
+          { Value: paramsOfPremierToSaveToForecast },
           this.week,
-          this.premieresForecastSelected.id_movie
-        ).subscribe((response: PremiereResponse) => {
-          const res = { ...response.value };
-          delete res[0].value;
-          res[0].ReleaseDate = this.date;
-          this.premiereToGenerateForecast.Inputs.input1.push(res[0]);
+          this.premiereForecastSelectedToSetParamas.id_movie
+        ).subscribe(response => {
+          if (response.value && response.value.length > 0) {
+            const forecastItemBodyToSentAzureServer = response.value[0];
+            forecastItemBodyToSentAzureServer.ReleaseDate = this.date;
+
+            const forecastItemBodyExist =
+              this.bodyToGetScoredLabelFromAzureServer.Inputs.input1.findIndex(
+                forecastItemBody => forecastItemBody.Title === forecastItemBodyToSentAzureServer.Title
+              );
+
+            forecastItemBodyExist >= 0 ?
+              this.bodyToGetScoredLabelFromAzureServer.Inputs.input1[forecastItemBodyExist] = forecastItemBodyToSentAzureServer :
+              this.bodyToGetScoredLabelFromAzureServer.Inputs.input1.push(forecastItemBodyToSentAzureServer);
+          }
         }, error => {
           console.log('Error:', error);
         });
@@ -97,7 +104,7 @@ export class HomeComponent implements OnInit {
    * Get weeks
    */
   getWeeks() {
-    this.weeksService.getWeeks(this.date).subscribe((response: WeeksResponse) => {
+    this.weeksService.getWeeks(this.date).subscribe(response => {
       this.week = Number(response.num_semana);
       this.idWeek = response.id;
     }, error => {
@@ -106,18 +113,10 @@ export class HomeComponent implements OnInit {
   }
 
   /**
-   * Load premieres and cities data
-   */
-  loadData() {
-    this.getPremiers();
-    this.getCities();
-  }
-
-  /**
    * Get premieres after selected weeks.
    */
   getPremiers() {
-    this.premiersService.getPremiers(this.idWeek).subscribe((response: PremiersResponse) => {
+    this.premiersService.getPremiers(this.idWeek).subscribe(response => {
       this.premieres = response.value;
     }, error => {
       console.log('Error:', error);
@@ -128,7 +127,7 @@ export class HomeComponent implements OnInit {
    * Get cities
    */
   getCities() {
-    this.citiesService.getCities().subscribe((response: CitiesResponse) => {
+    this.citiesService.getCities().subscribe(response => {
       this.cities = response.value;
     }, error => {
       console.log('Error:', error);
@@ -136,19 +135,27 @@ export class HomeComponent implements OnInit {
   }
 
   /**
-   * Save premiere forecast
+   * Save premiere forecast - This method will create the forecast
    */
-  savePremiereForecast() {
-    const premiereSelected: PremiereSelected[] = [];
+  createPremiereForecast() {
+    const premieresSelected: PremiereSelected[] = [];
 
     this.premieresListSelected.map(
-      premiere => premiereSelected.push({ id_semana: String(this.idWeek), id_pelicula: premiere, id_ciudad: Number(this.citySelected.id) })
+      premiere => premieresSelected.push({
+        id_semana: String(this.idWeek),
+        id_pelicula: premiere,
+        id_ciudad: Number(this.citySelected.id)
+      })
     );
 
-    this.premiersService.postAddForecastPremier(premiereSelected).subscribe((response: SuccessReponse) => {
+    this.premiersService.postCreateForecast(premieresSelected).subscribe(response => {
       this.showParamsSection = response.Result === 'OK';
+
       if (this.showParamsSection) {
-        this.getPremiereForecast();
+        // TODO: Check why we need to wait this time in order to get the premieres
+        setTimeout(() => {
+          this.getPremieresForecast();
+        }, 1000);
       }
     }, error => {
       console.log('Error:', error);
@@ -156,11 +163,11 @@ export class HomeComponent implements OnInit {
   }
 
   /**
-   * Get premiere forecast for the parametrization
+   * Get premieres of forecast for the parametrization
    */
-  getPremiereForecast() {
-    this.premiersService.getForecastPremiers(this.citySelected.id, this.idWeek).subscribe((response: GetPremieresForecast) => {
-      this.premieresForecast = response.Value;
+  getPremieresForecast() {
+    this.premiersService.getForecastPremiers(this.citySelected.id, this.idWeek).subscribe(response => {
+      this.listOfPremieresForecastToNeedParametrized = response.Value;
     }, error => {
       console.log('Error:', error);
     });
@@ -169,17 +176,19 @@ export class HomeComponent implements OnInit {
   /**
    * Generate forecast
    */
-  generateForecast() {
-    this.premiersService.postGenerateForecast(this.premiereToGenerateForecast).subscribe(response => {
+  getScoredLabelFromAzureServer() {
+    this.premiersService.postGenerateScoreLabelFromAzure(this.bodyToGetScoredLabelFromAzureServer).subscribe(response => {
       this.updateForecastAfterAzureResponse(response.Results.output1);
     }, error => {
       console.log('Error:', error);
     });
   }
 
-  updateForecastAfterAzureResponse(data: [{}]) {
-    this.premiersService.updateForecastAfterAzureResponse(data, this.premieresForecastSelected.id_forecast).subscribe(response => {
-      this.router.navigateByUrl('/generated/' + this.premieresForecastSelected.id_forecast);
+  updateForecastAfterAzureResponse(scoreLabelWithDataToUpdateForecast: SecoreLabedGeneratedItem[]) {
+    const codeForecast = this.citySelected.id + '' + this.week;
+
+    this.premiersService.updateForecastAfterAzureResponse(scoreLabelWithDataToUpdateForecast, codeForecast).subscribe(response => {
+      this.router.navigateByUrl('/generated/' + codeForecast);
     }, error => {
       console.log('Error:', error);
     });

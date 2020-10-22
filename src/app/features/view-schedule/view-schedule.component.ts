@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Schedule } from '@interfaces/response';
+import { Schedule } from '@interfaces/schedule';
 import { ScheduleService } from '@services/schedule/schedule.service';
 
 @Component({
@@ -30,7 +30,7 @@ export class ViewScheduleComponent implements OnInit {
    * Get schedule
    */
   getSchedule(): void {
-    this.scheduleService.getSchedule(this.forecast).subscribe((response: Schedule) => {
+    this.scheduleService.getSchedule(this.forecast).subscribe(response => {
       this.schedule = response;
       this.schedule.movies.forEach((movie, index: number) => {
         movie.shows.forEach(show => {
@@ -45,6 +45,8 @@ export class ViewScheduleComponent implements OnInit {
             this.movies[show.screen][show.time] = movieToAdd;
         });
       });
-    }, error => {});
+    }, error => {
+      console.log('Error:', error);
+    });
   }
 }

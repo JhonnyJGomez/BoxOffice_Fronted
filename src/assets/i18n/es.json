@@ -23,9 +23,10 @@
         "number-week": "Nº Semana",
         "cinema": "Cine",
         "average-ticket": "Ticket Promedio",
-        "apply": "Aplicar",
+        "get-premieres": "Obtener Estrenos",
         "parameterize": "Parametrizar",
-        "generate-schedule": "GENERAR PROGRAMACIÓN "
+        "generate-schedule": "GENERAR PROGRAMACIÓN",
+        "create-forecast": "Generar Pronóstico"
     },
     "modal-schedule": {
         "title": "Parámetros - PROGRAMACIÓN",

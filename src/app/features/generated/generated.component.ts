@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { SecoreLabedGeneratedItem } from '@interfaces/azure';
 import { ScoreService } from '@services/score/score.service';
-import { ScoreResponse, Output } from '@interfaces/response';
 
 @Component({
   selector: 'app-generated',
@@ -58,7 +58,7 @@ export class GeneratedComponent implements OnInit {
     }
   ];
 
-  dataSource: Output[] = [];
+  dataSource: SecoreLabedGeneratedItem[] = [];
   displayedColumns: string[] = ['Rank', 'Title', 'Rating', 'Dist', 'Genre', 'ReleaseDate', 'Scored Labels'];
   codeForecast: number;
 
@@ -77,7 +77,7 @@ export class GeneratedComponent implements OnInit {
 
   /** Gets Score */
   getScore() {
-    this.scoreService.getScore(this.codeForecast).subscribe((response: ScoreResponse) => {
+    this.scoreService.getScore(this.codeForecast).subscribe(response => {
       this.dataSource = response.Results.output1;
     }, error => {
       console.log('Error:', error);

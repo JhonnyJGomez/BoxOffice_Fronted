@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  webApiBase: 'http://192.168.0.231:3000/api',
+  webApiBase: 'http://192.168.39.199:3000/api',
   azure: `https://azuremlforecast.azure-api.net/`
 };
 

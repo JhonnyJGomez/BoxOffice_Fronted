@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { APP_CONSTANTS } from '@app/app.constants';
+import { CitiesResponse } from '@interfaces/cities';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +24,7 @@ export class CitiesService implements OnInit {
    * Get cities
    *
    */
-  getCities(): Observable<{}> {
-    return this.http.get(this.url);
+  getCities(): Observable<CitiesResponse> {
+    return this.http.get<CitiesResponse>(this.url);
   }
 }
