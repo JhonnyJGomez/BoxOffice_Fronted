@@ -9,4 +9,5 @@ export interface PremiereForecast {
     id_forecast: number;
     id_movie: number;
     nom_pelicula: string;
+    paramSeted?: boolean;
 }

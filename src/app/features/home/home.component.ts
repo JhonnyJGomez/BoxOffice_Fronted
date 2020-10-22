@@ -83,6 +83,9 @@ export class HomeComponent implements OnInit {
           if (response.value && response.value.length > 0) {
             const forecastItemBodyToSentAzureServer = response.value[0];
             forecastItemBodyToSentAzureServer.ReleaseDate = this.date;
+            this.listOfPremieresForecastToNeedParametrized.find(
+              premiere => premiere === this.premiereForecastSelectedToSetParamas
+            ).paramSeted = true;
 
             const forecastItemBodyExist =
               this.bodyToGetScoredLabelFromAzureServer.Inputs.input1.findIndex(

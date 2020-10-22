@@ -91,7 +91,7 @@
                 "
                 [value]="premier"
               >
-                {{ premier.nom_pelicula }}
+                {{ premier.nom_pelicula }} {{ premier.paramSeted ? '(Agregado)' : '(Pendiente)' }}
               </mat-option>
             </mat-select>
           </mat-form-field>
