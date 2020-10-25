@@ -31,7 +31,7 @@ const routes: Routes = [
         component: ScheduleComponent
       },
       {
-        path: 'view-schedule/:forecast',
+        path: 'view-schedule/:forecast/:week/:cinemaSelectedId/:premieresForecastIds',
         component: ViewScheduleComponent
       }
     ]

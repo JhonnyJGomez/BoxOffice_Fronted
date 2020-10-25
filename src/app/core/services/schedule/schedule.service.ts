@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 
 import { APP_CONSTANTS } from '@app/app.constants';
 import { CreatedProgramReponse, ParamProgramToSave } from '@interfaces/paramsPrograms';
-import { GeneratedSchedule } from '@interfaces/schedule';
 import { ProgramData } from '@interfaces/program';
 
 @Injectable({
@@ -36,18 +35,11 @@ export class ScheduleService implements OnInit {
   /**
    * Generate schedule
    */
-  generateSchedule(week: number, cinemaId: string, premieresForecastIds: number[]): Observable<GeneratedSchedule> {
-    return this.http.post<GeneratedSchedule>(this.urlGenerateSchedule, {
+  generateSchedule(week: number, cinemaId: string, premieresForecastIds: number[]): Observable<ProgramData> {
+    return this.http.post<ProgramData>(this.urlGenerateSchedule, {
       week,
       cinemaId: Number(cinemaId),
       premieres_forecast_ids: premieresForecastIds
     });
-  }
-
-  /**
-   * Get schedule
-   */
-  getSchedule(forecast: number): Observable<ProgramData> {
-    return this.http.get<ProgramData>(this.urlGetSchedule.replace('{forecast}', String(forecast)));
   }
 }

@@ -138,14 +138,8 @@ export class ScheduleComponent implements OnInit {
   generateSchedule() {
     const cod_forecast = this.premieresForecast[0].cod_forecast;
     const premieresForecastIds = this.premieresForecast.map(premiereForecast => premiereForecast.id_movie);
-    this.scheduleService.generateSchedule(this.week, this.cinemaSelected.id, premieresForecastIds).subscribe(response => {
-      if (response.status === 'Generated') {
-        this.router.navigateByUrl('/view-schedule/' + cod_forecast);
-      } else {
-        console.log('Un error ha ocurrido generando la programación');
-      }
-    }, error => {
-      console.log('Error:', error);
-    });
+    this.router.navigateByUrl(
+      `/view-schedule/${cod_forecast}/${this.week}/${this.cinemaSelected.id}/${premieresForecastIds.toString()}`
+    );
   }
 }

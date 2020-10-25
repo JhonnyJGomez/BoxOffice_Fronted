@@ -23,6 +23,9 @@ export class ViewScheduleComponent implements OnInit {
   screens: Screens[];
   times: Time[];
   days: CinemaDay[];
+  week: number;
+  cinemaSelectedId: string;
+  premieresForecastIds: string;
 
   constructor(
     private scheduleService: ScheduleService,
@@ -37,6 +40,9 @@ export class ViewScheduleComponent implements OnInit {
 
     this.route.params.subscribe(params => {
       this.forecast = params.forecast;
+      this.week = Number(params.week);
+      this.cinemaSelectedId = params.cinemaSelectedId;
+      this.premieresForecastIds = params.premieresForecastIds;
       this.getSchedule();
     });
   }
@@ -45,7 +51,24 @@ export class ViewScheduleComponent implements OnInit {
    * Get schedule
    */
   getSchedule(): void {
-    this.scheduleService.getSchedule(this.forecast).subscribe(response => {
+    /*this.scheduleService.generateSchedule(this.week, this.cinemaSelected.id, premieresForecastIds).subscribe(response => {
+      if (response.status === 'Generated') {
+        this.router.navigateByUrl(
+          `/view-schedule/${cod_forecast}/${this.week}/${this.cinemaSelected.id}/${premieresForecastIds.toString()}`
+        );
+      } else {
+        console.log('Un error ha ocurrido generando la programación');
+      }
+    }, error => {
+      console.log('Error:', error);
+    });*/
+
+
+    const premieresForecastIdsList = this.premieresForecastIds.split(',');
+    const premieresForecastIdsParsed = premieresForecastIdsList.map(
+      premieresForecastIdsParsedItem => Number(premieresForecastIdsParsedItem)
+    );
+    this.scheduleService.generateSchedule(this.week, this.cinemaSelectedId, premieresForecastIdsParsed).subscribe(response => {
       this.programData = response;
       this.schedule.id_forecast = `${this.forecast}`;
       this.schedule.id_semana = '49';
@@ -86,7 +109,7 @@ export class ViewScheduleComponent implements OnInit {
       this.schedule.days.forEach((day, index: number) => {
         day.movies.forEach(movie => {
           movie.shows.forEach(show => {
-            const screenId = Number(show.nom_sala.split(' ')[0]) - 1;
+            const screenId = Number(show.nom_sala.split(' ')[1]) - 1;
             const timeId = (show.id_tiempo - 1);
 
             if (!day.moviesParsedToRender[screenId]) {
@@ -97,6 +120,8 @@ export class ViewScheduleComponent implements OnInit {
           });
         });
       });
+
+      console.log(this.schedule);
     });
   }
 }
