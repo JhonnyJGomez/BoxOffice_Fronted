@@ -93,26 +93,6 @@ export class MockData {
                 cod_atributo: 'Temporada_Vacaciones',
                 type: 'check'
             },
-           /* {
-                Id: '2',
-                Atributo: 'Inicio_sabado_d10',
-                Type: 'check'
-            },
-            {
-                Id: '3',
-                Atributo: 'Inicio_domingo_a6',
-                Type: 'check'
-            },
-            {
-                Id: '4',
-                Atributo: 'grados_centigrados',
-                Type: 'text'
-            },
-            {
-                Id: '5',
-                Atributo: 'Precipitacion',
-                Type: 'text'
-            },*/
             {
                 id: '6',
                 cod_atributo: 'evento_tv',
@@ -405,41 +385,6791 @@ export class MockData {
         screens: [
             {
                 id: 1,
-                screen: 'Sala 1',
+                screen: '1 Sala',
                 cap: '70'
             },
             {
                 id: 2,
-                screen: 'Sala 2',
+                screen: '2 Sala',
                 cap: '70'
             },
             {
                 id: 3,
-                screen: 'Sala 3',
+                screen: '3 Sala',
                 cap: '70'
             },
             {
                 id: 4,
-                screen: 'Sala 4',
+                screen: '4 Sala',
                 cap: '70'
             },
             {
                 id: 5,
-                screen: 'Sala 5',
+                screen: '5 Sala',
                 cap: '70'
             },
             {
                 id: 6,
-                screen: 'Sala 6',
+                screen: '6 Sala',
                 cap: '70'
             },
             {
                 id: 7,
-                screen: 'Sala 7',
+                screen: '7 Sala',
+                cap: '70'
+            },
+            {
+                id: 8,
+                screen: '8 Sala',
+                cap: '70'
+            },
+            {
+                id: 9,
+                screen: '9 Sala',
+                cap: '70'
+            },
+            {
+                id: 10,
+                screen: '10 Sala',
+                cap: '70'
+            },
+            {
+                id: 11,
+                screen: '11 Sala',
+                cap: '70'
+            },
+            {
+                id: 12,
+                screen: '12 Sala',
                 cap: '70'
             },
         ],
     };
+    PROGRAM = {
+        status: [
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 1,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 1,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 2,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 2,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 3,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 3,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 4,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 4,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 5,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 5,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 6,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 6,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '1 Sala',
+                capacidad: 176,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '10 Sala',
+                capacidad: 249,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '11 Sala',
+                capacidad: 124,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '12 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '2 Sala',
+                capacidad: 160,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '3 Sala',
+                capacidad: 146,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '4 Sala',
+                capacidad: 148,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '5 Sala',
+                capacidad: 188,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '6 Sala',
+                capacidad: 202,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '7 Sala',
+                capacidad: 281,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '8 Sala',
+                capacidad: 408,
+                id_tiempo: 4
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 1
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 1
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 2
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 2
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 3
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 3
+            },
+            {
+                id: 1,
+                titulo: 'CAPITAN AMERICA: GUERRA CIVIL (2D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'APT',
+                id_dia: 7,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 4
+            },
+            {
+                id: 3,
+                titulo: 'STAR TREK SIN LIMITES. (3D) (DOB)',
+                nom_genero: 'Acción',
+                nom_rating: 'M18',
+                id_dia: 7,
+                nom_sala: '9 Sala',
+                capacidad: 285,
+                id_tiempo: 4
+            }
+        ]
+    };
+
 
     constructor() { }
 
@@ -500,6 +7230,12 @@ export class MockData {
     public getSchedule() {
         return {
             ... this.GET_VIEW_SCHEDULE
+        };
+    }
+
+    public getProgramData() {
+        return {
+            ... this.PROGRAM
         };
     }
 }

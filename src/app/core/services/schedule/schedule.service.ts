@@ -4,7 +4,8 @@ import { Observable } from 'rxjs';
 
 import { APP_CONSTANTS } from '@app/app.constants';
 import { CreatedProgramReponse, ParamProgramToSave } from '@interfaces/paramsPrograms';
-import { GeneratedSchedule, Schedule, GenerateScheduleData } from '@interfaces/schedule';
+import { GeneratedSchedule } from '@interfaces/schedule';
+import { ProgramData } from '@interfaces/program';
 
 @Injectable({
   providedIn: 'root'
@@ -46,7 +47,7 @@ export class ScheduleService implements OnInit {
   /**
    * Get schedule
    */
-  getSchedule(forecast: number): Observable<Schedule> {
-    return this.http.get<Schedule>(this.urlGetSchedule.replace('{forecast}', String(forecast)));
+  getSchedule(forecast: number): Observable<ProgramData> {
+    return this.http.get<ProgramData>(this.urlGetSchedule.replace('{forecast}', String(forecast)));
   }
 }

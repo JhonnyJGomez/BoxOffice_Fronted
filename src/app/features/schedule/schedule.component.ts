@@ -1,19 +1,19 @@
-import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 
+import { Cinema } from '@interfaces/cinema';
 import { CinemaService } from '@services/cinema/cinema.service';
 import { CitiesService } from '@services/cities/cities.service';
+import { City } from '@interfaces/cities';
+import { GenerateScheduleData } from '@interfaces/schedule';
+import { isArray } from 'util';
 import { ModalProgramsComponent } from '@components/modal-programs/modal-programs.component';
+import { ParamProgramItem, ParamProgramToSave } from '@interfaces/paramsPrograms';
+import { PremiereForecast } from '@interfaces/premiersForecast';
 import { PremiersService } from '@services/premiers/premiers.service';
 import { ScheduleService } from '@services/schedule/schedule.service';
 import { WeeksService } from '@services/weeks/weeks.service';
-import { isArray } from 'util';
-import { City } from '@interfaces/cities';
-import { PremiereForecast } from '@interfaces/premiersForecast';
-import { Cinema } from '@interfaces/cinema';
-import { ParamProgramItem, ParamProgramToSave } from '@interfaces/paramsPrograms';
-import { GenerateScheduleData } from '@interfaces/schedule';
 
 @Component({
   selector: 'app-schedule',

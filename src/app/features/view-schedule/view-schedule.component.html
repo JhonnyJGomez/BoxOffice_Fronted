@@ -1,4 +1,4 @@
-<mat-card *ngIf="schedule">
+<mat-card *ngIf="programData">
   <mat-card-title>{{ "view-schedule.title" | translate }}</mat-card-title>
   <mat-card-subtitle>
     <span>
@@ -11,9 +11,9 @@
     </span>
   </mat-card-subtitle>
   <mat-card-content class="wrapper">
-    <mat-card *ngFor="let day of schedule.days" class="day-wrapper">
+    <mat-card *ngFor="let day of programGroupedByDays" class="day-wrapper">
       <span class="day-header">
-        {{ day.day }}
+        {{ day.name_day }}
       </span>
       <table class="schedule-table">
         <thead>
@@ -37,14 +37,14 @@
             >
               <span
                 *ngIf="
-                  movies[indexScreen] && movies[indexScreen][indexTime];
+                  day.moviesParsedToRender[indexScreen] && day.moviesParsedToRender[indexScreen][indexTime];
                   else elseBlock
                 "
               >
-                <span class="movie-data">{{ movies[indexScreen][indexTime].title }}</span>
-                <span class="movie-data">{{ movies[indexScreen][indexTime].genre }} - {{ movies[indexScreen][indexTime].cens }}</span>
-                <span class="movie-data">{{ movies[indexScreen][indexTime].start || '' }}</span>
-                <span class="movie-data">{{ movies[indexScreen][indexTime].final || '' }}</span>
+                <span class="movie-data">{{ day.moviesParsedToRender[indexScreen][indexTime].titulo }}</span>
+                <span class="movie-data">{{ day.moviesParsedToRender[indexScreen][indexTime].nom_genero }} - {{ day.moviesParsedToRender[indexScreen][indexTime].cens }}</span>
+                <span class="movie-data">{{ day.moviesParsedToRender[indexScreen][indexTime].start || '' }}</span>
+                <span class="movie-data">{{ day.moviesParsedToRender[indexScreen][indexTime].final || '' }}</span>
               </span>
               <ng-template #elseBlock>
                 {{ "schedule.table.empty-show" | translate }}
