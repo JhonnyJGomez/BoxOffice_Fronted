@@ -111,6 +111,7 @@ export class ViewScheduleComponent implements OnInit {
           movie.shows.forEach(show => {
             const screenId = Number(show.nom_sala.split(' ')[1]) - 1;
             const timeId = (show.id_tiempo - 1);
+            this.screens[timeId].cap = `${show.capacidad}`;
 
             if (!day.moviesParsedToRender[screenId]) {
               day.moviesParsedToRender[screenId] = new Array(this.schedule.screens.length);
