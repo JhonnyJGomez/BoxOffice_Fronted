@@ -71,9 +71,9 @@ export class ViewScheduleComponent implements OnInit {
     this.scheduleService.generateSchedule(this.week, this.cinemaSelectedId, premieresForecastIdsParsed).subscribe(response => {
       this.programData = response;
       this.schedule.id_forecast = `${this.forecast}`;
-      this.schedule.id_semana = '49';
-      this.schedule.id_cine = '1';
-      this.schedule.nom_cine = 'Jockey Plaza';
+      this.schedule.id_semana = `${this.week}`;
+      this.schedule.id_cine = `${this.cinemaSelectedId}`;
+      this.schedule.nom_cine = '-----';
       this.schedule.screens = this.screens;
       this.schedule.times = this.times;
 
@@ -111,7 +111,7 @@ export class ViewScheduleComponent implements OnInit {
           movie.shows.forEach(show => {
             const screenId = Number(show.nom_sala.split(' ')[1]) - 1;
             const timeId = (show.id_tiempo - 1);
-            this.screens[timeId].cap = `${show.capacidad}`;
+            this.schedule.screens.find(screen => screen.id === screenId + 1).cap = `${show.capacidad}`;
 
             if (!day.moviesParsedToRender[screenId]) {
               day.moviesParsedToRender[screenId] = new Array(this.schedule.screens.length);
