@@ -103,21 +103,23 @@ export class ScheduleComponent implements OnInit {
     const dialogRef = this.dialog.open(ModalProgramsComponent, dialogConfig);
 
     dialogRef.afterClosed().subscribe((params: ParamProgramItem[]) => {
-      params.map(item => {
-        if (isArray(item.value)) {
-          item.value = item.value[0] ? true : '';
-        } else {
-          item.value = String(item.value || '');
-        }
+      if (params.length > 0) {
+        params.map(item => {
+          if (isArray(item.value)) {
+            item.value = item.value[0] ? true : '';
+          } else {
+            item.value = String(item.value || '');
+          }
 
-        this.paramProgramToSave.value.push({
-          cod_forecast: this.premieresForecast[0].cod_forecast,
-          id_parametro: Number(item.id),
-          value: item.value
+          this.paramProgramToSave.value.push({
+            cod_forecast: this.premieresForecast[0].cod_forecast,
+            id_parametro: Number(item.id),
+            value: item.value
+          });
         });
-      });
 
-      this.saveParamsProgram();
+        this.saveParamsProgram();
+      }
     });
   }
 
