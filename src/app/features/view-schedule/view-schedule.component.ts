@@ -73,7 +73,7 @@ export class ViewScheduleComponent implements OnInit {
       this.schedule.id_forecast = `${this.forecast}`;
       this.schedule.id_semana = `${this.week}`;
       this.schedule.id_cine = `${this.cinemaSelectedId}`;
-      this.schedule.nom_cine = '-----';
+      this.schedule.nom_cine = this.programData.status[0].nom_cine;
       this.schedule.screens = this.screens;
       this.schedule.times = this.times;
 
@@ -121,8 +121,6 @@ export class ViewScheduleComponent implements OnInit {
           });
         });
       });
-
-      console.log(this.schedule);
     });
   }
 }

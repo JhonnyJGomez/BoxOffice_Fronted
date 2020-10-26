@@ -53,6 +53,7 @@ export interface ProgramDataPremiere {
     nom_sala: string;
     capacidad: number;
     id_tiempo: number;
+    nom_cine: string;
 }
 
 export interface CinemaDay {
